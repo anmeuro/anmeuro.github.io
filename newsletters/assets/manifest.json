@@ -1,0 +1,84 @@
+{
+  "site": {
+    "title": {
+      "en": "Letters from Houghton",
+      "ko": "하턴에서 온 편지",
+      "zh": "来自霍顿的信",
+      "de": "Briefe aus Houghton"
+    },
+    "subtitle": {
+      "en": "Ministry dispatches from Sion Han \u2014 Christ the King Church & Serve the King Ministry",
+      "ko": "Sion Han의 사역 소식 \u2014 Christ the King Church & Serve the King Ministry",
+      "zh": "Sion Han \u7684\u4e8b\u5de5\u901a\u8baf \u2014 Christ the King Church & Serve the King Ministry",
+      "de": "Dienstberichte von Sion Han \u2014 Christ the King Church & Serve the King Ministry"
+    }
+  },
+  "entries": [
+    {
+      "date": "2026-08-18",
+      "displayDate": { "en": "August 18, 2026", "ko": "2026\ub144 8\uc6d4 18\uc77c", "zh": "2026\u5e748\u670818\u65e5", "de": "18. August 2026" },
+      "title": {
+        "en": "Summer is Coming to an End",
+        "ko": "\uc5ec\ub984\uc774 \uc800\ubb3c\uc5b4\uac11\ub2c8\ub2e4",
+        "zh": "\u590f\u5929\u5373\u5c06\u7ed3\u675f",
+        "de": "Der Sommer geht zu Ende"
+      },
+      "excerpt": {
+        "en": "Wildfire smoke, a hospital scare, four sermons in July, and a church open house that drew 35 visitors.",
+        "ko": "\uc0b0\ubd88 \uc5f0\uae30, \uc785\uc6d0 \uc18c\ub3d9, 7\uc6d4\uc758 \ub124 \ubc88\uc758 \uc124\uad50, 35\uba85\uc774 \ucc3e\uc740 \uad50\ud68c \uc624\ud508\ud558\uc6b0\uc2a4 \uc18c\uc2dd.",
+        "zh": "\u91ce\u706b\u70df\u96fe\u3001\u4f4f\u9662\u60ca\u9b42\u3001\u4e03\u6708\u56db\u6b21\u8bb2\u9053\uff0c\u4ee5\u53ca\u5438\u5f1535\u4f4d\u8bbf\u5ba2\u7684\u6559\u4f1a\u5f00\u653e\u65e5\u3002",
+        "de": "Waldbrandrauch, ein Krankenhausschreck, vier Predigten im Juli und ein Tag der offenen T\u00fcr mit 35 Besuchern."
+      },
+      "files": {
+        "en": "2026-08-18/en.html",
+        "ko": "2026-08-18/ko.html",
+        "zh": "2026-08-18/zh.html",
+        "de": "2026-08-18/de.html"
+      }
+    },
+    {
+      "date": "2026-06-02",
+      "displayDate": { "en": "June 2, 2026", "ko": "2026\ub144 6\uc6d4 2\uc77c", "zh": "2026\u5e746\u67082\u65e5", "de": "2. Juni 2026" },
+      "title": {
+        "en": "Short Update",
+        "ko": "\uc9e7\uc740 \uc18c\uc2dd",
+        "zh": "\u7b80\u77ed\u66f4\u65b0",
+        "de": "Kurzes Update"
+      },
+      "excerpt": {
+        "en": "Ordination postponed pending a presbytery vote, a men's retreat baptism, and a break-in at the church building.",
+        "ko": "\ub178\ud68c \ud22c\ud45c\ub97c \uae30\ub2e4\ub9ac\uba70 \uc5f0\uae30\ub41c \uc548\uc218, \ub0a8\uc131 \uc218\ub828\ud68c \uc138\ub840\uc2dd, \uadf8\ub9ac\uace0 \uad50\ud68c \uac74\ubb3c \ub3c4\ub09c \uc0ac\uac74.",
+        "zh": "\u6309\u7267\u56e0\u957f\u8001\u4f1a\u6295\u7968\u800c\u63a8\u8fdf\uff0c\u7537\u5b50\u9000\u4fee\u4f1a\u4e0a\u7684\u53d7\u6d17\uff0c\u4ee5\u53ca\u6559\u5802\u5efa\u7b51\u906d\u5165\u6237\u76d7\u7a83\u3002",
+        "de": "Ordination wegen einer Presbyterie-Abstimmung verschoben, eine Taufe bei der M\u00e4nnerfreizeit und ein Einbruch im Kirchengeb\u00e4ude."
+      },
+      "files": {
+        "en": "2026-06-02/en.html",
+        "ko": "2026-06-02/ko.html",
+        "zh": "2026-06-02/zh.html",
+        "de": "2026-06-02/de.html"
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "displayDate": { "en": "April 30, 2026", "ko": "2026\ub144 4\uc6d4 30\uc77c", "zh": "2026\u5e744\u670830\u65e5", "de": "30. April 2026" },
+      "title": {
+        "en": "End of the Spring Semester",
+        "ko": "\ubd04 \ud559\uae30\ub97c \ub9c8\uce58\uba70",
+        "zh": "\u6625\u5b63\u5b66\u671f\u7ed3\u675f",
+        "de": "Ende des Fr\u00fchjahrssemesters"
+      },
+      "excerpt": {
+        "en": "Licensed by Evangel Presbytery, 11 new church members, and reflections on authority and accountability in campus ministry.",
+        "ko": "Evangel \ub178\ud68c\uc758 \uc778\ud5c8, \uc0c8 \uad50\uc778 11\uba85, \uadf8\ub9ac\uace0 \uce90\ud37c\uc2a4 \uc0ac\uc5ed \uc548\uc5d0\uc11c\uc758 \uad8c\uc704\uc640 \ucc45\uc784\uc5d0 \ub300\ud55c \uc0dd\uac01.",
+        "zh": "\u83b7\u5f97Evangel\u4e2d\u4f1a\u8ba4\u53ef\u30011\uf60911\u4f4d\u65b0\u4f1a\u53cb\uff0c\u4ee5\u53ca\u5173\u4e8e\u6821\u56ed\u4e8b\u5de5\u4e2d\u6743\u67c4\u4e0e\u95ee\u8d23\u7684\u53cd\u601d\u3002",
+        "de": "Lizenziert von der Evangel Presbytery, 11 neue Gemeindemitglieder und Gedanken zu Autorit\u00e4t und Rechenschaftspflicht in der Campus-Arbeit."
+      },
+      "files": {
+        "en": "2026-04-30/en.html",
+        "ko": "2026-04-30/ko.html",
+        "zh": "2026-04-30/zh.html",
+        "de": "2026-04-30/de.html"
+      }
+    }
+  ]
+}

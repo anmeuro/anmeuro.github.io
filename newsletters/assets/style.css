@@ -1,0 +1,319 @@
+/* ===========================================================
+   Letters from Houghton — archive stylesheet
+   Palette: pale airmail-paper blue, ink navy, oxblood + cobalt
+   (the classic red/blue airmail edge stripe), postmark gold.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Courier+Prime:wght@400;700&display=swap');
+
+:root {
+  --paper: #E8EEF0;
+  --paper-deep: #DCE6E8;
+  --card: #F2F6F5;
+  --ink: #1F2A2E;
+  --ink-soft: #4B5A5E;
+  --oxblood: #8B2C22;
+  --cobalt: #1F4E79;
+  --gold: #A9862F;
+  --hairline: #B9C6C9;
+  --stripe-w: 10px;
+
+  --font-display: 'Spectral', Georgia, serif;
+  --font-meta: 'Courier Prime', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle paper texture via layered gradients */
+body {
+  background-image:
+    radial-gradient(circle at 15% 8%, rgba(31,78,121,0.05), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(139,44,34,0.05), transparent 40%);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  padding: 56px 0 28px;
+  border-bottom: 3px double var(--hairline);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.site-header .airmail-edge {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--oxblood) 0 14px,
+    var(--paper) 14px 20px,
+    var(--cobalt) 20px 34px,
+    var(--paper) 34px 40px
+  );
+}
+
+.eyebrow {
+  font-family: var(--font-meta);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cobalt);
+  margin: 18px 0 10px;
+}
+
+.site-title {
+  font-size: clamp(34px, 5.6vw, 52px);
+  font-weight: 600;
+  line-height: 1.05;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+.site-subtitle {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- Language selector ---------- */
+
+.lang-select {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.lang-select .lang-label {
+  font-family: var(--font-meta);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-right: 4px;
+}
+
+.lang-btn {
+  font-family: var(--font-meta);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  padding: 7px 14px;
+  border: 1.5px solid var(--hairline);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.lang-btn:hover {
+  border-color: var(--cobalt);
+  color: var(--cobalt);
+}
+
+.lang-btn.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* ---------- Entry list ---------- */
+
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.entry {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  padding: 28px 28px 24px 34px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.entry::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: var(--stripe-w);
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--oxblood) 0 8px,
+    var(--card) 8px 11px,
+    var(--cobalt) 11px 19px,
+    var(--card) 19px 22px
+  );
+}
+
+.entry:hover {
+  transform: translateX(2px);
+  box-shadow: -2px 4px 0 rgba(31,42,46,0.06);
+}
+
+.entry-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Postmark */
+.postmark {
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  outline: 1px solid var(--gold);
+  outline-offset: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-8deg);
+}
+
+.postmark-inner {
+  text-align: center;
+  font-family: var(--font-meta);
+  color: var(--gold);
+  line-height: 1.15;
+}
+
+.postmark-inner .pm-place {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.postmark-inner .pm-day {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.postmark-inner .pm-month {
+  display: block;
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.entry-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 2px 0 6px;
+  color: var(--ink);
+}
+
+.entry-title a { border-bottom: 1px solid transparent; }
+.entry-title a:hover { border-bottom-color: var(--oxblood); color: var(--oxblood); }
+
+.entry-date-full {
+  font-family: var(--font-meta);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.entry-excerpt {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+  max-width: 56ch;
+}
+
+/* Stamps row = language chips */
+.stamp-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stamp {
+  font-family: var(--font-meta);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  padding: 6px 12px;
+  border: 1.5px dashed var(--hairline);
+  color: var(--ink-soft);
+  background: var(--paper);
+  transition: all 0.15s ease;
+}
+
+.stamp:hover {
+  border-color: var(--oxblood);
+  border-style: solid;
+  color: var(--oxblood);
+}
+
+.stamp.preferred {
+  border-style: solid;
+  border-color: var(--cobalt);
+  color: var(--cobalt);
+  font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+  font-family: var(--font-meta);
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 560px) {
+  .wrap { padding: 0 16px 60px; }
+  .site-header { padding: 40px 0 24px; }
+  .entry { padding: 22px 18px 20px 26px; }
+  .postmark { width: 62px; height: 62px; }
+  .postmark-inner .pm-day { font-size: 16px; }
+  .entry-title { font-size: 20px; }
+  .entry-top { flex-wrap: wrap; }
+}
+
+/* ---------- Accessibility ---------- */
+
+:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
