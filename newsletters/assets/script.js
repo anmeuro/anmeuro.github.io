@@ -93,12 +93,25 @@ async function init() {
             <h2 class="entry-title"><a href="${preferredHref}">${pick(entry.title, currentLang)}</a></h2>
             <p class="entry-excerpt">${pick(entry.excerpt, currentLang)}</p>
           </div>
-          <div class="postmark" aria-hidden="true">
-            <span class="postmark-inner">
-              <span class="pm-place">Houghton MI</span>
-              <span class="pm-day">${pm.day}</span>
-              <span class="pm-month">${pm.month} ${pm.year}</span>
-            </span>
+          <div class="stamp-cluster" aria-hidden="true">
+            <div class="stamp-frame">
+              <span class="notch notch-top"></span>
+              <span class="notch notch-bottom"></span>
+              <span class="notch notch-left"></span>
+              <span class="notch notch-right"></span>
+              <div class="stamp-art">
+                <span class="stamp-place">Houghton MI</span>
+                <span class="stamp-cross"></span>
+              </div>
+            </div>
+            <div class="postmark">
+              <span class="cancel-line cancel-line-left"></span>
+              <span class="postmark-inner">
+                <span class="pm-day">${pm.day}</span>
+                <span class="pm-month">${pm.month} ${pm.year}</span>
+              </span>
+              <span class="cancel-line cancel-line-right"></span>
+            </div>
           </div>
         </div>
         <div class="stamp-row"></div>

@@ -143,6 +143,9 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Entry list ---------- */
 
 .entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -182,47 +185,153 @@ a { color: inherit; text-decoration: none; }
   gap: 16px;
 }
 
-/* Postmark */
-.postmark {
+/* ---------- Stamp + postmark cluster ---------- */
+
+.stamp-cluster {
+  position: relative;
   flex-shrink: 0;
-  width: 76px;
-  height: 76px;
+  width: 108px;
+  height: 118px;
+}
+
+/* The die-cut postage stamp itself */
+.stamp-frame {
+  position: relative;
+  width: 78px;
+  height: 98px;
+  margin: 6px auto 0;
+  padding: 9px 7px;
+  background: var(--stamp-ink, var(--cobalt));
+  box-shadow: 0 1px 2px rgba(31,42,46,0.15);
+}
+
+/* colour rotation so successive stamps in the log don't all match */
+.entry:nth-of-type(3n+1) .stamp-frame { --stamp-ink: #6E4A2E; }
+.entry:nth-of-type(3n+2) .stamp-frame { --stamp-ink: #1F4E79; }
+.entry:nth-of-type(3n)   .stamp-frame { --stamp-ink: #6B3A34; }
+
+/* perforation: scalloped bites cut out of each edge, coloured to
+   match the card behind the stamp so it reads as die-cut paper */
+.stamp-frame .notch {
+  position: absolute;
+  background-repeat: repeat;
+}
+.stamp-frame .notch-top,
+.stamp-frame .notch-bottom {
+  left: 4px; right: 4px;
+  height: 11px;
+  background-image: radial-gradient(circle at 5.5px 5.5px, var(--card) 5px, transparent 5.3px);
+  background-size: 11px 11px;
+  background-position: -5.5px 0;
+}
+.stamp-frame .notch-top { top: -5.5px; }
+.stamp-frame .notch-bottom { bottom: -5.5px; }
+.stamp-frame .notch-left,
+.stamp-frame .notch-right {
+  top: 4px; bottom: 4px;
+  width: 11px;
+  background-image: radial-gradient(circle at 5.5px 5.5px, var(--card) 5px, transparent 5.3px);
+  background-size: 11px 11px;
+  background-position: 0 -5.5px;
+}
+.stamp-frame .notch-left { left: -5.5px; }
+.stamp-frame .notch-right { right: -5.5px; }
+
+/* engraving inside the stamp */
+.stamp-art {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(232,238,240,0.55);
+  padding: 6px 2px;
+}
+
+.stamp-place {
+  font-family: var(--font-meta);
+  font-size: 7px;
+  letter-spacing: 0.09em;
+  color: var(--paper);
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.stamp-cross {
+  display: block;
+  width: 14px;
+  height: 20px;
+  position: relative;
+  opacity: 0.85;
+}
+.stamp-cross::before,
+.stamp-cross::after {
+  content: "";
+  position: absolute;
+  background: var(--paper);
+}
+.stamp-cross::before { /* vertical bar */
+  left: 50%; top: 0;
+  width: 2.5px; height: 20px;
+  transform: translateX(-50%);
+}
+.stamp-cross::after { /* horizontal bar */
+  left: 50%; top: 5px;
+  width: 11px; height: 2.5px;
+  transform: translateX(-50%);
+}
+
+/* Postmark cancellation, overlapping the stamp at an angle */
+.postmark {
+  position: absolute;
+  top: 46px;
+  right: -6px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
-  border: 2px solid var(--gold);
+  border: 1.6px solid var(--gold);
   outline: 1px solid var(--gold);
-  outline-offset: 3px;
+  outline-offset: 2.5px;
+  background: rgba(232,238,240,0.82);
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(-8deg);
+  transform: rotate(-10deg);
 }
 
 .postmark-inner {
   text-align: center;
   font-family: var(--font-meta);
   color: var(--gold);
-  line-height: 1.15;
-}
-
-.postmark-inner .pm-place {
-  display: block;
-  font-size: 8px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  line-height: 1.1;
 }
 
 .postmark-inner .pm-day {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
 }
 
 .postmark-inner .pm-month {
   display: block;
-  font-size: 8.5px;
-  letter-spacing: 0.08em;
+  font-size: 7.5px;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
+
+/* wavy cancellation strokes fanning out from the postmark circle */
+.cancel-line {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 8px;
+  transform: translateY(-50%);
+  background-repeat: repeat-x;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8'%3E%3Cpath d='M0 4 Q5 0 10 4 T20 4' stroke='%23A9862F' stroke-width='1.3' fill='none'/%3E%3C/svg%3E");
+  opacity: 0.9;
+}
+.cancel-line-left { right: 100%; margin-right: -2px; }
+.cancel-line-right { left: 100%; margin-left: -2px; }
 
 .entry-title {
   font-size: 24px;
@@ -301,8 +410,11 @@ a { color: inherit; text-decoration: none; }
   .wrap { padding: 0 16px 60px; }
   .site-header { padding: 40px 0 24px; }
   .entry { padding: 22px 18px 20px 26px; }
-  .postmark { width: 62px; height: 62px; }
-  .postmark-inner .pm-day { font-size: 16px; }
+  .stamp-cluster { width: 88px; height: 100px; }
+  .stamp-frame { width: 62px; height: 80px; }
+  .postmark { width: 56px; height: 56px; top: 38px; right: -8px; }
+  .postmark-inner .pm-day { font-size: 14px; }
+  .cancel-line { width: 22px; }
   .entry-title { font-size: 20px; }
   .entry-top { flex-wrap: wrap; }
 }
