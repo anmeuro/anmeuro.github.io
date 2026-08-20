@@ -1,9 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-<meta http-equiv="refresh" content="0; url=https://cdn.jsdelivr.net/gh/anmeuro/Logos@HEAD/Acts/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acts 圣经学习摘要</title>
+<meta name="description" content="Acts 圣经学习摘要 PDF 列表（按最新排序）">
+<style>
+  :root {
+    --paper: #F4F1EA;
+    --ink: #24211B;
+    --ink-soft: #5C574B;
+    --accent: #7A4A2E;
+    --hairline: #D8D0BE;
+    --font-body: Georgia, 'Nanum Myeongjo', 'Songti SC', serif;
+    --font-meta: 'Courier New', Courier, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  header {
+    border-bottom: 3px double var(--hairline);
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  header p {
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border-bottom: 1px dashed var(--hairline);
+    padding: 14px 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  li:last-child { border-bottom: none; }
+  .date {
+    font-family: var(--font-meta);
+    font-size: 13px;
+    color: var(--ink-soft);
+    width: 130px;
+    flex-shrink: 0;
+  }
+  a.file-link {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+  }
+  a.file-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .status {
+    color: var(--ink-soft);
+    font-style: italic;
+    padding: 20px 4px;
+  }
+  .other-heading {
+    font-family: var(--font-meta);
+    font-size: 12.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 32px 0 10px;
+    border-bottom: 1.5px solid var(--hairline);
+    padding-bottom: 8px;
+  }
+  @media (max-width: 520px) {
+    li { flex-wrap: wrap; gap: 4px 12px; }
+    .date { width: auto; }
+  }
+</style>
 </head>
 <body>
-Redirecting...
+
+<div class="wrap">
+  <header>
+    <h1>Acts 圣经学习摘要</h1>
+    <p>按最近的聚会顺序排列</p>
+  </header>
+
+  <div id="status" class="status">正在加载列表&hellip;</div>
+  <ul id="dated-list"></ul>
+  <div id="other-wrap"></div>
+</div>
+
+<script>
+(function () {
+  var REPO = 'gh/anmeuro/Logos@main';
+  var FOLDER = 'Acts';
+  var CDN_BASE = 'https://cdn.jsdelivr.net/' + REPO + '/' + FOLDER + '/';
+  var API_URL = 'https://data.jsdelivr.com/v1/packages/' + REPO;
+
+  var MONTHS_ZH = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+
+  function parseDateFromName(name) {
+    // Matches Summary_YYYY_MM_DD.pdf
+    var m = name.match(/^Summary_(\d{4})_(\d{2})_(\d{2})\.pdf$/i);
+    if (!m) return null;
+    var y = parseInt(m[1], 10), mo = parseInt(m[2], 10), d = parseInt(m[3], 10);
+    return { y: y, mo: mo, d: d, key: y * 10000 + mo * 100 + d };
+  }
+
+  function findFolder(node, name) {
+    if (!node.files) return null;
+    for (var i = 0; i < node.files.length; i++) {
+      if (node.files[i].type === 'directory' && node.files[i].name === name) {
+        return node.files[i];
+      }
+    }
+    return null;
+  }
+
+  fetch(API_URL)
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      var actsNode = findFolder(data, FOLDER);
+      if (!actsNode || !actsNode.files) throw new Error('Acts folder not found');
+
+      var pdfs = actsNode.files.filter(function (f) {
+        return f.type === 'file' && /\.pdf$/i.test(f.name);
+      });
+
+      var dated = [];
+      var other = [];
+
+      pdfs.forEach(function (f) {
+        var parsed = parseDateFromName(f.name);
+        if (parsed) {
+          dated.push({ name: f.name, date: parsed });
+        } else {
+          other.push(f.name);
+        }
+      });
+
+      dated.sort(function (a, b) { return b.date.key - a.date.key; });
+      other.sort();
+
+      var statusEl = document.getElementById('status');
+      var listEl = document.getElementById('dated-list');
+      var otherWrapEl = document.getElementById('other-wrap');
+
+      if (dated.length === 0 && other.length === 0) {
+        statusEl.textContent = '没有可显示的文件。';
+        return;
+      }
+
+      statusEl.remove();
+
+      dated.forEach(function (item) {
+        var li = document.createElement('li');
+        var dateLabel = item.date.y + '年 ' + MONTHS_ZH[item.date.mo - 1] + ' ' + item.date.d + '日';
+        li.innerHTML =
+          '<span class="date">' + dateLabel + '</span>' +
+          '<a class="file-link" target="_blank" rel="noopener" href="' +
+            CDN_BASE + encodeURIComponent(item.name) +
+          '">' + item.name.replace(/\.pdf$/i, '').replace(/_/g, ' ') + '</a>';
+        listEl.appendChild(li);
+      });
+
+      if (other.length > 0) {
+        var heading = document.createElement('div');
+        heading.className = 'other-heading';
+        heading.textContent = '其他文件';
+        otherWrapEl.appendChild(heading);
+
+        var otherList = document.createElement('ul');
+        other.forEach(function (name) {
+          var li = document.createElement('li');
+          li.innerHTML =
+            '<a class="file-link" target="_blank" rel="noopener" href="' +
+              CDN_BASE + encodeURIComponent(name) +
+            '">' + name.replace(/\.pdf$/i, '') + '</a>';
+          otherList.appendChild(li);
+        });
+        otherWrapEl.appendChild(otherList);
+      }
+    })
+    .catch(function (err) {
+      document.getElementById('status').textContent =
+        '无法加载列表，请稍后刷新重试。(' + err.message + ')';
+    });
+})();
+</script>
+
 </body>
 </html>
