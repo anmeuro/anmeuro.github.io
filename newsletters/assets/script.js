@@ -73,12 +73,47 @@ async function init() {
     document.documentElement.lang = currentLang;
   }
 
+function postmarkSvg(entry, pm, uid) {
+  const topId = `pm-top-${uid}`;
+  const botId = `pm-bot-${uid}`;
+  const cx = 42, cy = 42, r = 33;
+  return `
+    <svg class="postmark-svg" viewBox="0 0 148 84" aria-hidden="true">
+      <defs>
+        <path id="${topId}" d="M ${cx - r},${cy} A ${r},${r} 0 0 1 ${cx + r},${cy}" />
+        <path id="${botId}" d="M ${cx - r},${cy} A ${r},${r} 0 0 0 ${cx + r},${cy}" />
+      </defs>
+
+      <circle class="pm-ring" cx="${cx}" cy="${cy}" r="${r}" stroke-width="1.6" />
+      <circle class="pm-ring" cx="${cx}" cy="${cy}" r="${r - 4}" stroke-width="1" />
+
+      <text class="pm-arc-text" font-size="8.2">
+        <textPath href="#${topId}" startOffset="50%" text-anchor="middle">HOUGHTON MI</textPath>
+      </text>
+      <text class="pm-arc-text" font-size="8.2">
+        <textPath href="#${botId}" startOffset="50%" text-anchor="middle">SERVE THE KING</textPath>
+      </text>
+
+      <circle class="pm-dot" cx="${cx - r}" cy="${cy}" r="1.6" />
+      <circle class="pm-dot" cx="${cx + r}" cy="${cy}" r="1.6" />
+
+      <rect class="pm-date-box" x="${cx - 20}" y="${cy - 11}" width="40" height="22" stroke-width="1.3" />
+      <text class="pm-date-text" x="${cx}" y="${cy - 1}" font-size="10.5">${pm.month} ${pm.day}</text>
+      <text class="pm-date-text" x="${cx}" y="${cy + 9}" font-size="8">${pm.year}</text>
+
+      <path class="pm-wave" d="M ${cx + r + 4},${cy - 12} q 6,-8 12,0 t 12,0 t 12,0 t 12,0" stroke-width="1.4" />
+      <path class="pm-wave" d="M ${cx + r + 4},${cy}     q 6,-8 12,0 t 12,0 t 12,0 t 12,0" stroke-width="1.4" />
+      <path class="pm-wave" d="M ${cx + r + 4},${cy + 12} q 6,-8 12,0 t 12,0 t 12,0 t 12,0" stroke-width="1.4" />
+    </svg>
+  `;
+}
+
   function renderList() {
     listEl.innerHTML = '';
     // entries already sorted newest-first in manifest, but sort defensively
     const sorted = [...data.entries].sort((a, b) => b.date.localeCompare(a.date));
 
-    sorted.forEach(entry => {
+    sorted.forEach((entry, idx) => {
       const pm = postmarkFor(entry.date);
       const li = document.createElement('li');
       li.className = 'entry';
@@ -93,26 +128,7 @@ async function init() {
             <h2 class="entry-title"><a href="${preferredHref}">${pick(entry.title, currentLang)}</a></h2>
             <p class="entry-excerpt">${pick(entry.excerpt, currentLang)}</p>
           </div>
-          <div class="stamp-cluster" aria-hidden="true">
-            <div class="stamp-frame">
-              <span class="notch notch-top"></span>
-              <span class="notch notch-bottom"></span>
-              <span class="notch notch-left"></span>
-              <span class="notch notch-right"></span>
-              <div class="stamp-art">
-                <span class="stamp-place">Houghton MI</span>
-                <span class="stamp-cross"></span>
-              </div>
-            </div>
-            <div class="postmark">
-              <span class="cancel-line cancel-line-left"></span>
-              <span class="postmark-inner">
-                <span class="pm-day">${pm.day}</span>
-                <span class="pm-month">${pm.month} ${pm.year}</span>
-              </span>
-              <span class="cancel-line cancel-line-right"></span>
-            </div>
-          </div>
+          <div class="postmark-wrap">${postmarkSvg(entry, pm, idx)}</div>
         </div>
         <div class="stamp-row"></div>
       `;
