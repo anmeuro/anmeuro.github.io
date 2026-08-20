@@ -76,7 +76,7 @@ async function init() {
 function postmarkSvg(entry, pm, uid) {
   const topId = `pm-top-${uid}`;
   const botId = `pm-bot-${uid}`;
-  const cx = 42, cy = 42, r = 33;
+  const cx = 44, cy = 44, r = 35;
   return `
     <svg class="postmark-svg" viewBox="0 0 148 84" aria-hidden="true">
       <defs>
@@ -84,26 +84,26 @@ function postmarkSvg(entry, pm, uid) {
         <path id="${botId}" d="M ${cx - r},${cy} A ${r},${r} 0 0 0 ${cx + r},${cy}" />
       </defs>
 
-      <circle class="pm-ring" cx="${cx}" cy="${cy}" r="${r}" stroke-width="1.6" />
-      <circle class="pm-ring" cx="${cx}" cy="${cy}" r="${r - 4}" stroke-width="1" />
+      <circle class="pm-ring" cx="${cx}" cy="${cy}" r="${r}" stroke-width="2.2" />
+      <circle class="pm-ring" cx="${cx}" cy="${cy}" r="${r - 4.5}" stroke-width="1.4" />
 
-      <text class="pm-arc-text" font-size="8.2">
+      <text class="pm-arc-text" font-size="9.6">
         <textPath href="#${topId}" startOffset="50%" text-anchor="middle">HOUGHTON MI</textPath>
       </text>
-      <text class="pm-arc-text" font-size="8.2">
+      <text class="pm-arc-text" font-size="9.6">
         <textPath href="#${botId}" startOffset="50%" text-anchor="middle">SERVE THE KING</textPath>
       </text>
 
-      <circle class="pm-dot" cx="${cx - r}" cy="${cy}" r="1.6" />
-      <circle class="pm-dot" cx="${cx + r}" cy="${cy}" r="1.6" />
+      <circle class="pm-dot" cx="${cx - r}" cy="${cy}" r="2.1" />
+      <circle class="pm-dot" cx="${cx + r}" cy="${cy}" r="2.1" />
 
-      <rect class="pm-date-box" x="${cx - 20}" y="${cy - 11}" width="40" height="22" stroke-width="1.3" />
-      <text class="pm-date-text" x="${cx}" y="${cy - 1}" font-size="10.5">${pm.month} ${pm.day}</text>
-      <text class="pm-date-text" x="${cx}" y="${cy + 9}" font-size="8">${pm.year}</text>
+      <rect class="pm-date-box" x="${cx - 21}" y="${cy - 12}" width="42" height="24" stroke-width="1.8" />
+      <text class="pm-date-text" x="${cx}" y="${cy - 1}" font-size="11.8">${pm.month} ${pm.day}</text>
+      <text class="pm-date-text" x="${cx}" y="${cy + 10}" font-size="9">${pm.year}</text>
 
-      <path class="pm-wave" d="M ${cx + r + 4},${cy - 12} q 6,-8 12,0 t 12,0 t 12,0 t 12,0" stroke-width="1.4" />
-      <path class="pm-wave" d="M ${cx + r + 4},${cy}     q 6,-8 12,0 t 12,0 t 12,0 t 12,0" stroke-width="1.4" />
-      <path class="pm-wave" d="M ${cx + r + 4},${cy + 12} q 6,-8 12,0 t 12,0 t 12,0 t 12,0" stroke-width="1.4" />
+      <path class="pm-wave" d="M ${cx + r + 5},${cy - 13} q 6,-9 12,0 t 12,0 t 12,0 t 12,0" stroke-width="2" />
+      <path class="pm-wave" d="M ${cx + r + 5},${cy}      q 6,-9 12,0 t 12,0 t 12,0 t 12,0" stroke-width="2" />
+      <path class="pm-wave" d="M ${cx + r + 5},${cy + 13} q 6,-9 12,0 t 12,0 t 12,0 t 12,0" stroke-width="2" />
     </svg>
   `;
 }
