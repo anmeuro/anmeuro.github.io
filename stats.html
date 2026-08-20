@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visitor Stats &mdash; Sion's Letters from Houghton, MI</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .stats-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+  .stats-header {
+    padding: 48px 0 24px;
+    border-bottom: 3px double var(--hairline);
+    margin-bottom: 32px;
+  }
+  .stats-header h1 {
+    font-size: clamp(28px, 4.5vw, 40px);
+    font-weight: 600;
+    margin: 8px 0 10px;
+    color: var(--ink);
+  }
+  .stats-header p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0;
+  }
+  .stats-frame-wrap {
+    border: 1.5px solid var(--hairline);
+    background: var(--card);
+    padding: 4px;
+  }
+  .stats-frame-wrap iframe {
+    width: 100%;
+    height: 1400px;
+    border: none;
+    display: block;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: var(--font-meta);
+    font-size: 13.5px;
+    color: var(--cobalt);
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="stats-wrap">
+
+  <header class="stats-header">
+    <a class="back-link" href="index.html">&larr; Back to Letters</a>
+    <p class="eyebrow" style="margin-top:0;">Ministry Archive</p>
+    <h1>Visitor Stats</h1>
+    <p>Daily visits and visitor locations for Sion's ministry newsletter archive.</p>
+  </header>
+
+  <div class="stats-frame-wrap">
+    <iframe
+      src="https://sionletters.goatcounter.com?embed"
+      title="GoatCounter visitor statistics dashboard"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <footer class="site-footer">
+    <p>Houghton, Michigan &middot; Serve the King Ministry &middot; Christ the King Church</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
