@@ -147,6 +147,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .lang-btn {
+  display: inline-block;
+  text-decoration: none;
   font-family: var(--font-meta);
   font-size: 14.5px;
   letter-spacing: 0.03em;
