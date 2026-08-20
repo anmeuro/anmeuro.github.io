@@ -180,11 +180,23 @@ function postmarkSvg(entry, pm, uid) {
     `;
   }
 
+  function renderSubscribe() {
+    const subscribe = data.site.subscribe;
+    const banner = document.getElementById('subscribe-banner');
+    if (!banner || !subscribe) return;
+    banner.innerHTML = `
+      <h2 class="subscribe-heading">${pick(subscribe.heading, currentLang)}</h2>
+      <p class="subscribe-text">${pick(subscribe.text, currentLang)}</p>
+      <a class="subscribe-btn" href="subscribe.html">${pick(subscribe.buttonLabel, currentLang)}</a>
+    `;
+  }
+
   function renderAll() {
     renderLangButtons();
     renderHeader();
     renderList();
     renderEssays();
+    renderSubscribe();
     renderSupportBanner();
   }
 
