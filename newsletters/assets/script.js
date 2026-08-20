@@ -158,10 +158,33 @@ function postmarkSvg(entry, pm, uid) {
     `;
   }
 
+  function renderEssays() {
+    const section = document.getElementById('essays-section');
+    const essays = data.essays || [];
+    if (!essays.length) { section.innerHTML = ''; return; }
+
+    const sorted = [...essays].sort((a, b) => b.date.localeCompare(a.date));
+    const label = pick(data.site.essaysLabel || { en: 'Essays on Substack' }, currentLang);
+
+    const items = sorted.map(essay => `
+      <li class="essay-item">
+        <span class="essay-date">${pick(essay.displayDate, currentLang)}</span>
+        <a class="essay-title" href="${essay.url}" target="_blank" rel="noopener">${essay.title}</a>
+        <span class="essay-external" aria-hidden="true">&#8599;</span>
+      </li>
+    `).join('');
+
+    section.innerHTML = `
+      <h2 class="essays-heading">${label}</h2>
+      <ul class="essay-list">${items}</ul>
+    `;
+  }
+
   function renderAll() {
     renderLangButtons();
     renderHeader();
     renderList();
+    renderEssays();
     renderSupportBanner();
   }
 

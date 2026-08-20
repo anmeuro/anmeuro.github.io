@@ -21,8 +21,28 @@
       },
       "buttonLabel": "Serve the King Support",
       "url": "https://secure.etransfer.com/eft/araize/flexblockcode/donation1.cfm?d2org=STKM&d2tool=donate"
+    },
+    "essaysLabel": {
+      "en": "Essays on Substack",
+      "ko": "Substack 에세이",
+      "zh": "Substack 上的文章",
+      "de": "Essays auf Substack"
     }
   },
+  "essays": [
+    {
+      "title": "Into One New Man",
+      "date": "2026-02-25",
+      "displayDate": { "en": "February 25, 2026", "ko": "2026년 2월 25일", "zh": "2026年2月25日", "de": "25. Februar 2026" },
+      "url": "https://sionhan.substack.com/p/into-one-new-man"
+    },
+    {
+      "title": "The Christian Duty of Thanksgiving",
+      "date": "2025-11-27",
+      "displayDate": { "en": "November 27, 2025", "ko": "2025년 11월 27일", "zh": "2025年11月27日", "de": "27. November 2025" },
+      "url": "https://sionhan.substack.com/p/the-christian-duty-of-thanksgiving"
+    }
+  ],
   "entries": [
     {
       "date": "2026-08-18",

@@ -331,6 +331,68 @@ a { color: inherit; text-decoration: none; }
   color: var(--paper);
 }
 
+/* ---------- Essays (Substack) ---------- */
+
+.essays-section {
+  margin-top: 44px;
+}
+
+.essays-heading {
+  font-family: var(--font-meta);
+  font-size: 13.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cobalt);
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--hairline);
+}
+
+.essay-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.essay-item {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 4px;
+  border-bottom: 1px dashed var(--hairline);
+}
+
+.essay-item:last-child { border-bottom: none; }
+
+.essay-date {
+  font-family: var(--font-meta);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  flex-shrink: 0;
+  width: 130px;
+}
+
+.essay-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+}
+
+.essay-title:hover {
+  color: var(--oxblood);
+  border-bottom-color: var(--oxblood);
+}
+
+.essay-external {
+  font-size: 13px;
+  color: var(--gold);
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -351,6 +413,8 @@ a { color: inherit; text-decoration: none; }
   .site-header { padding: 40px 0 24px; }
   .entry { padding: 22px 18px 20px 26px; }
   .postmark-wrap { width: 138px; height: 78px; }
+  .essay-item { flex-wrap: wrap; gap: 4px 12px; }
+  .essay-date { width: auto; }
   .entry-title { font-size: 20px; }
   .entry-top { flex-wrap: wrap; }
 }
