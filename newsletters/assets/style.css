@@ -4,7 +4,9 @@
    (the classic red/blue airmail edge stripe), postmark gold.
    =========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Courier+Prime:wght@400;700&display=swap');
+/* No external font CDN — using system font stacks so the page loads
+   reliably everywhere, including mainland China where Google Fonts
+   domains (fonts.googleapis.com / fonts.gstatic.com) are blocked. */
 
 :root {
   --paper: #E8EEF0;
@@ -18,8 +20,8 @@
   --hairline: #9FB0B3;
   --stripe-w: 10px;
 
-  --font-display: 'Spectral', Georgia, serif;
-  --font-meta: 'Courier Prime', 'Courier New', monospace;
+  --font-display: Georgia, 'Nanum Myeongjo', 'Songti SC', 'STSong', serif;
+  --font-meta: 'Courier New', Courier, monospace;
 }
 
 * { box-sizing: border-box; }
