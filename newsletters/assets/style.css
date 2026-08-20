@@ -54,10 +54,40 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Header ---------- */
 
 .site-header {
-  padding: 56px 0 28px;
+  padding: 40px 0 28px;
   border-bottom: 3px double var(--hairline);
   margin-bottom: 40px;
   position: relative;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 28px;
+  margin: 14px 0 24px;
+}
+
+.site-nav-link {
+  font-family: var(--font-meta);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 4px 0;
+  color: var(--ink-soft);
+  border: none;
+  border-bottom: 1.5px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.site-nav-link:hover {
+  color: var(--cobalt);
+  border-bottom-color: var(--hairline);
+}
+
+.site-nav-link.active {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+  font-weight: 700;
 }
 
 .site-header .airmail-edge {
@@ -375,7 +405,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--paper);
 }
 
-/* ---------- Essays (Substack) ---------- */
+/* ---------- Essays page ---------- */
 
 .essays-section {
   margin-top: 44px;
