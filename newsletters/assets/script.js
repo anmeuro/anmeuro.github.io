@@ -158,45 +158,10 @@ function postmarkSvg(entry, pm, uid) {
     `;
   }
 
-  function renderEssays() {
-    const section = document.getElementById('essays-section');
-    const essays = data.essays || [];
-    if (!essays.length) { section.innerHTML = ''; return; }
-
-    const sorted = [...essays].sort((a, b) => b.date.localeCompare(a.date));
-    const label = pick(data.site.essaysLabel || { en: 'Essays on Substack' }, currentLang);
-
-    const items = sorted.map(essay => `
-      <li class="essay-item">
-        <span class="essay-date">${pick(essay.displayDate, currentLang)}</span>
-        <a class="essay-title" href="${essay.url}" target="_blank" rel="noopener">${essay.title}</a>
-        <span class="essay-external" aria-hidden="true">&#8599;</span>
-      </li>
-    `).join('');
-
-    section.innerHTML = `
-      <h2 class="essays-heading">${label}</h2>
-      <ul class="essay-list">${items}</ul>
-    `;
-  }
-
-  function renderSubscribe() {
-    const subscribe = data.site.subscribe;
-    const banner = document.getElementById('subscribe-banner');
-    if (!banner || !subscribe) return;
-    banner.innerHTML = `
-      <h2 class="subscribe-heading">${pick(subscribe.heading, currentLang)}</h2>
-      <p class="subscribe-text">${pick(subscribe.text, currentLang)}</p>
-      <a class="subscribe-btn" href="subscribe.html">${pick(subscribe.buttonLabel, currentLang)}</a>
-    `;
-  }
-
   function renderAll() {
     renderLangButtons();
     renderHeader();
     renderList();
-    renderEssays();
-    renderSubscribe();
     renderSupportBanner();
   }
 

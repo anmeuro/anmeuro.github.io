@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essays &mdash; Sion's Letters from Houghton, MI</title>
+<meta name="description" content="Essays by Sion Han, published on Substack.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <div class="airmail-edge" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="Site sections">
+      <a href="index.html" class="site-nav-link">Letters</a>
+      <a href="about.html" class="site-nav-link">About Sion</a>
+      <a href="essays.html" class="site-nav-link active">Essays</a>
+      <a href="subscribe.html" class="site-nav-link">Subscribe</a>
+    </nav>
+
+    <p class="eyebrow">Ministry Archive</p>
+    <h1 class="site-title">Essays on Substack</h1>
+    <p class="site-subtitle">Longer-form writing from Sion Han, published independently on Substack.</p>
+  </header>
+
+  <main>
+    <ul class="essay-list" id="essay-list">
+      <li class="essay-item"><span class="essay-date">&nbsp;</span><span>Loading&hellip;</span></li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>Houghton, Michigan &middot; Serve the King Ministry &middot; Christ the King Church</p>
+  </footer>
+
+</div>
+
+<script data-goatcounter="https://sionletters.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script>
+(function () {
+  fetch('assets/manifest.json', { cache: 'no-store' })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      var essays = (data.essays || []).slice().sort(function (a, b) {
+        return b.date.localeCompare(a.date);
+      });
+      var listEl = document.getElementById('essay-list');
+      if (!essays.length) {
+        listEl.innerHTML = '<li class="essay-item">No essays yet.</li>';
+        return;
+      }
+      listEl.innerHTML = essays.map(function (essay) {
+        var date = (essay.displayDate && essay.displayDate.en) || essay.date;
+        return (
+          '<li class="essay-item">' +
+            '<span class="essay-date">' + date + '</span>' +
+            '<a class="essay-title" href="' + essay.url + '" target="_blank" rel="noopener">' + essay.title + '</a>' +
+            '<span class="essay-external" aria-hidden="true">&#8599;</span>' +
+          '</li>'
+        );
+      }).join('');
+    })
+    .catch(function () {
+      document.getElementById('essay-list').innerHTML =
+        '<li class="essay-item">Could not load essays right now.</li>';
+    });
+})();
+</script>
+</body>
+</html>
