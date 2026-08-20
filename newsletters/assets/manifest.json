@@ -11,6 +11,16 @@
       "ko": "Sion Han의 사역 소식 \u2014 Christ the King Church & Serve the King Ministry",
       "zh": "Sion Han \u7684\u4e8b\u5de5\u901a\u8baf \u2014 Christ the King Church & Serve the King Ministry",
       "de": "Dienstberichte von Sion Han \u2014 Christ the King Church & Serve the King Ministry"
+    },
+    "support": {
+      "text": {
+        "en": "If you would like to support Sion in the ministry, please click below and select his name.",
+        "ko": "Sion의 사역을 후원하고 싶으시다면, 아래를 클릭하고 그의 이름을 선택해주세요.",
+        "zh": "如果您愿意在事工上支持Sion，请点击下方并选择他的名字。",
+        "de": "Wenn Sie Sion im Dienst unterst\u00fctzen m\u00f6chten, klicken Sie bitte unten und w\u00e4hlen Sie seinen Namen aus."
+      },
+      "buttonLabel": "Serve the King Support",
+      "url": "https://secure.etransfer.com/eft/araize/flexblockcode/donation1.cfm?d2org=STKM&d2tool=donate"
     }
   },
   "entries": [
@@ -30,10 +40,10 @@
         "de": "Waldbrandrauch, ein Krankenhausschreck, vier Predigten im Juli und ein Tag der offenen T\u00fcr mit 35 Besuchern."
       },
       "files": {
-        "en": "2026-08-18/en.html",
-        "ko": "2026-08-18/ko.html",
-        "zh": "2026-08-18/zh.html",
-        "de": "2026-08-18/de.html"
+        "en": "newsletters/2026-08-18/en.html",
+        "ko": "newsletters/2026-08-18/ko.html",
+        "zh": "newsletters/2026-08-18/zh.html",
+        "de": "newsletters/2026-08-18/de.html"
       }
     },
     {
@@ -52,10 +62,10 @@
         "de": "Ordination wegen einer Presbyterie-Abstimmung verschoben, eine Taufe bei der M\u00e4nnerfreizeit und ein Einbruch im Kirchengeb\u00e4ude."
       },
       "files": {
-        "en": "2026-06-02/en.html",
-        "ko": "2026-06-02/ko.html",
-        "zh": "2026-06-02/zh.html",
-        "de": "2026-06-02/de.html"
+        "en": "newsletters/2026-06-02/en.html",
+        "ko": "newsletters/2026-06-02/ko.html",
+        "zh": "newsletters/2026-06-02/zh.html",
+        "de": "newsletters/2026-06-02/de.html"
       }
     },
     {
@@ -74,10 +84,10 @@
         "de": "Lizenziert von der Evangel Presbytery, 11 neue Gemeindemitglieder und Gedanken zu Autorit\u00e4t und Rechenschaftspflicht in der Campus-Arbeit."
       },
       "files": {
-        "en": "2026-04-30/en.html",
-        "ko": "2026-04-30/ko.html",
-        "zh": "2026-04-30/zh.html",
-        "de": "2026-04-30/de.html"
+        "en": "newsletters/2026-04-30/en.html",
+        "ko": "newsletters/2026-04-30/ko.html",
+        "zh": "newsletters/2026-04-30/zh.html",
+        "de": "newsletters/2026-04-30/de.html"
       }
     }
   ]

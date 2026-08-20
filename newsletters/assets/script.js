@@ -148,10 +148,21 @@ function postmarkSvg(entry, pm, uid) {
     });
   }
 
+  function renderSupportBanner() {
+    const support = data.site.support;
+    if (!support) return;
+    const banner = document.getElementById('support-banner');
+    banner.innerHTML = `
+      <p class="support-text">${pick(support.text, currentLang)}</p>
+      <a class="support-btn" href="${support.url}" target="_blank" rel="noopener">${support.buttonLabel}</a>
+    `;
+  }
+
   function renderAll() {
     renderLangButtons();
     renderHeader();
     renderList();
+    renderSupportBanner();
   }
 
   renderAll();
