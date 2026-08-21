@@ -1,0 +1,116 @@
+diff --git a/newsletters/assets/script.js b/newsletters/assets/script.js
+index 5f721b9..c8920dd 100644
+--- a/newsletters/assets/script.js
++++ b/newsletters/assets/script.js
+@@ -131,20 +131,8 @@ function postmarkSvg(entry, pm, uid) {
+           </div>
+           <div class="postmark-wrap">${postmarkSvg(entry, pm, idx)}</div>
+         </div>
+-        <div class="stamp-row"></div>
+       `;
+ 
+-      const stampRow = li.querySelector('.stamp-row');
+-      LANG_ORDER.forEach(lang => {
+-        const href = entry.files[lang];
+-        if (!href) return;
+-        const a = document.createElement('a');
+-        a.className = 'stamp' + (lang === currentLang ? ' preferred' : '');
+-        a.href = href;
+-        a.textContent = LANG_LABEL[lang];
+-        stampRow.appendChild(a);
+-      });
+-
+       listEl.appendChild(li);
+     });
+   }
+diff --git a/newsletters/assets/style.css b/newsletters/assets/style.css
+index aeec9dd..b1ffe86 100644
+--- a/newsletters/assets/style.css
++++ b/newsletters/assets/style.css
+@@ -73,7 +73,7 @@ a { color: inherit; text-decoration: none; }
+   font-size: 13px;
+   letter-spacing: 0.04em;
+   padding: 4px 0;
+-  color: var(--ink-soft);
++  color: var(--ink);
+   border: none;
+   border-bottom: 1.5px solid transparent;
+   transition: all 0.15s ease;
+@@ -297,37 +297,6 @@ a { color: inherit; text-decoration: none; }
+   max-width: 56ch;
+ }
+ 
+-/* Stamps row = language chips */
+-.stamp-row {
+-  display: flex;
+-  flex-wrap: wrap;
+-  gap: 10px;
+-}
+-
+-.stamp {
+-  font-family: var(--font-meta);
+-  font-size: 13.5px;
+-  letter-spacing: 0.03em;
+-  padding: 7px 14px;
+-  border: 1.5px dashed var(--hairline);
+-  color: var(--ink-soft);
+-  background: var(--paper);
+-  transition: all 0.15s ease;
+-}
+-
+-.stamp:hover {
+-  border-color: var(--oxblood);
+-  border-style: solid;
+-  color: var(--oxblood);
+-}
+-
+-.stamp.preferred {
+-  border-style: solid;
+-  border-color: var(--cobalt);
+-  color: var(--cobalt);
+-  font-weight: 700;
+-}
+-
+ /* ---------- Support banner ---------- */
+ 
+ .support-banner {
+@@ -493,6 +462,39 @@ a { color: inherit; text-decoration: none; }
+   .essay-date { width: auto; }
+   .entry-title { font-size: 20px; }
+   .entry-top { flex-wrap: wrap; }
++
++  /* Turn the nav into a bordered, segmented tab bar (one row, five
++     equal cells) so labels stay legible and evenly spaced instead of
++     wrapping into loose, right-aligned lines of varying width. */
++  .site-nav {
++    display: grid;
++    grid-template-columns: repeat(5, 1fr);
++    gap: 0;
++    border: 1.5px solid var(--hairline);
++    border-radius: 10px;
++    overflow: hidden;
++    margin-bottom: 20px;
++  }
++
++  .site-nav-link {
++    text-align: center;
++    padding: 9px 3px;
++    font-size: 10.5px;
++    line-height: 1.3;
++    letter-spacing: 0.01em;
++    border: none;
++    border-right: 1px solid var(--hairline);
++    background: var(--card);
++  }
++
++  .site-nav-link:last-child {
++    border-right: none;
++  }
++
++  .site-nav-link.active {
++    background: var(--ink);
++    color: var(--paper);
++  }
+ }
+ 
+ /* ---------- Accessibility ---------- */

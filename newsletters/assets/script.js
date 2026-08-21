@@ -131,19 +131,7 @@ function postmarkSvg(entry, pm, uid) {
           </div>
           <div class="postmark-wrap">${postmarkSvg(entry, pm, idx)}</div>
         </div>
-        <div class="stamp-row"></div>
       `;
-
-      const stampRow = li.querySelector('.stamp-row');
-      LANG_ORDER.forEach(lang => {
-        const href = entry.files[lang];
-        if (!href) return;
-        const a = document.createElement('a');
-        a.className = 'stamp' + (lang === currentLang ? ' preferred' : '');
-        a.href = href;
-        a.textContent = LANG_LABEL[lang];
-        stampRow.appendChild(a);
-      });
 
       listEl.appendChild(li);
     });
