@@ -12,8 +12,9 @@ const STORAGE_KEY = 'lfh-preferred-lang';
 
 function getPreferredLang() {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && LANG_ORDER.includes(saved)) return saved;
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl = params.get('lang');
+    if (fromUrl && LANG_ORDER.includes(fromUrl)) return fromUrl;
   } catch (e) {}
   const nav = (navigator.language || 'en').slice(0, 2);
   if (nav === 'ko') return 'ko';
