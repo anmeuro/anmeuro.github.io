@@ -159,7 +159,33 @@ function postmarkSvg(entry, pm, uid) {
     `;
   }
 
-  function renderAll() {
+  
+const NAV_LABELS = {
+  en: { letters: 'Letters', about: 'About Sion', houghton: 'About Houghton', essays: 'Essays', subscribe: 'Subscribe' },
+  ko: { letters: '편지', about: 'Sion 소개', houghton: '하턴 소개', essays: '에세이', subscribe: '구독' },
+  zh: { letters: '书信', about: '关于Sion', houghton: '关于霍顿', essays: '文章', subscribe: '订阅' },
+  de: { letters: 'Briefe', about: 'Über Sion', houghton: 'Über Houghton', essays: 'Essays', subscribe: 'Abonnieren' }
+};
+
+const NAV_HREFS = {
+  en: { letters: 'index.html', about: 'about.html', houghton: 'houghton.html', essays: 'essays.html', subscribe: 'subscribe.html' },
+  ko: { letters: 'index.html?lang=ko', about: 'about-ko.html', houghton: 'houghton-ko.html', essays: 'essays.html', subscribe: 'subscribe-ko.html' },
+  zh: { letters: 'index.html?lang=zh', about: 'about-zh.html', houghton: 'houghton-zh.html', essays: 'essays.html', subscribe: 'subscribe-zh.html' },
+  de: { letters: 'index.html?lang=de', about: 'about-de.html', houghton: 'houghton-de.html', essays: 'essays.html', subscribe: 'subscribe-de.html' }
+};
+
+function renderNav() {
+  const labels = NAV_LABELS[currentLang] || NAV_LABELS.en;
+  const hrefs = NAV_HREFS[currentLang] || NAV_HREFS.en;
+  document.querySelectorAll('.site-nav-link[data-nav]').forEach(function (link) {
+    var key = link.getAttribute('data-nav');
+    if (labels[key]) link.textContent = labels[key];
+    if (hrefs[key]) link.setAttribute('href', hrefs[key]);
+  });
+}
+
+function renderAll() {
+    renderNav();
     renderLangButtons();
     renderHeader();
     renderList();
