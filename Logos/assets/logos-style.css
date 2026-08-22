@@ -1,0 +1,245 @@
+/* ===========================================================
+   Logos — Bible study archive stylesheet
+   Palette: warm parchment / ink brown (distinct from the
+   newsletters section's airmail blue, same "old paper" family)
+   =========================================================== */
+
+:root {
+  --paper: #F4F1EA;
+  --card: #FBF9F4;
+  --ink: #24211B;
+  --ink-soft: #5C574B;
+  --accent: #7A4A2E;
+  --accent-soft: #B08968;
+  --hairline: #D8D0BE;
+  --font-body: Georgia, 'Nanum Myeongjo', 'Songti SC', serif;
+  --font-meta: 'Courier New', Courier, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  padding: 40px 0 26px;
+  border-bottom: 3px double var(--hairline);
+  margin-bottom: 32px;
+  position: relative;
+}
+.crumb {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+.crumb a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.crumb a:hover { color: var(--accent); }
+
+.site-title {
+  font-size: clamp(30px, 5.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+.site-subtitle {
+  font-size: 16.5px;
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- Language selector ---------- */
+.lang-select {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.lang-select .lang-label {
+  font-family: var(--font-meta);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-right: 4px;
+}
+.lang-btn {
+  display: inline-block;
+  font-family: var(--font-meta);
+  font-size: 14px;
+  padding: 7px 15px;
+  border: 1.5px solid var(--hairline);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+.lang-btn.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* ---------- Book grid (Logos/index.html) ---------- */
+.book-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+.book-card {
+  background: var(--card);
+  border: 1.5px solid var(--hairline);
+  border-radius: 4px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.book-card h2 { margin: 0; font-size: 21px; }
+.book-card .book-alt {
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-style: italic;
+  margin-left: 8px;
+}
+.book-open {
+  font-family: var(--font-meta);
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 6px 14px;
+}
+.book-open:hover { background: var(--accent); color: var(--paper); }
+.empty-note { color: var(--ink-soft); font-style: italic; }
+
+/* ---------- Entry list (book index page) ---------- */
+.entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.entry {
+  position: relative;
+  background: var(--card);
+  border: 1.5px solid var(--hairline);
+  padding: 22px 22px 20px 26px;
+}
+.entry::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: 6px;
+  background: var(--accent-soft);
+}
+.entry-date {
+  font-family: var(--font-meta);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.entry-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+.entry-title a { text-decoration: none; border-bottom: 1px solid transparent; }
+.entry-title a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.entry-excerpt {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 58ch;
+}
+.status { color: var(--ink-soft); font-style: italic; padding: 20px 4px; }
+
+/* ---------- Study content page (individual entry) ---------- */
+.study-body p, .study-body li {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--ink);
+  max-width: 65ch;
+}
+.study-body p { margin: 0 0 20px; }
+.study-body h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 34px 0 14px;
+  border-top: 1px solid var(--hairline);
+  padding-top: 22px;
+}
+.study-body blockquote {
+  margin: 22px 0;
+  padding: 4px 20px;
+  border-left: 3px solid var(--accent-soft);
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+.study-body .ref {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-family: var(--font-meta);
+  font-size: 13px;
+  color: var(--accent);
+}
+.study-body .key-points, .study-body .reflection-list {
+  margin: 0 0 20px;
+  padding-left: 22px;
+  max-width: 65ch;
+}
+.study-body .reflection-list {
+  border-left: 3px solid var(--accent-soft);
+  padding-left: 20px;
+  margin-left: 2px;
+}
+.study-body .reflection-list li { margin-bottom: 10px; padding-left: 4px; }
+.study-body .reflection-list li strong { color: var(--ink); }
+.study-body a { color: var(--accent); text-decoration: underline; }
+
+.entry-nav-footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--hairline);
+  font-family: var(--font-meta);
+  font-size: 13.5px;
+}
+.entry-nav-footer a { color: var(--accent); text-decoration: underline; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 560px) {
+  .wrap { padding: 0 16px 60px; }
+  .site-header { padding: 30px 0 20px; }
+  .entry { padding: 18px 16px 16px 20px; }
+  .entry-title { font-size: 19px; }
+  .book-card { padding: 14px 16px; }
+}

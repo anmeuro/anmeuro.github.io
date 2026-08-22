@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{BOOK_TITLE_EN}} — Bible Study Summaries</title>
+<meta name="description" content="{{BOOK_TITLE_EN}} Bible study summary archive, most recent first">
+<link rel="stylesheet" href="../assets/logos-style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site-header">
+    <p class="crumb"><a href="../index.html">← All books</a></p>
+    <h1 class="site-title" id="book-title">{{BOOK_TITLE_EN}}</h1>
+    <p class="site-subtitle" id="book-subtitle">Bible study summaries, most recent first</p>
+
+    <nav class="lang-select" id="lang-select" aria-label="Choose reading language">
+      <!-- populated by script -->
+    </nav>
+  </header>
+
+  <main>
+    <div id="status" class="status">Loading…</div>
+    <ul class="entry-list" id="entry-list"></ul>
+  </main>
+</div>
+
+<script src="../assets/logos-common.js"></script>
+<script src="../assets/logos-entries.js"></script>
+
+</body>
+</html>

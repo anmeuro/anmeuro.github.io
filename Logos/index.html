@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logos — Bible Study Archive</title>
+<meta name="description" content="Bible study summary archive, choose a book and a language.">
+<link rel="stylesheet" href="assets/logos-style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site-header">
+    <p class="crumb"><a href="../index.html">← Home</a></p>
+    <h1 class="site-title" id="page-title">Logos</h1>
+    <p class="site-subtitle" id="page-subtitle">Bible study summaries — choose a book below</p>
+
+    <nav class="lang-select" id="lang-select" aria-label="Choose reading language">
+      <!-- populated by script -->
+    </nav>
+  </header>
+
+  <main>
+    <ul class="book-grid" id="book-grid"></ul>
+    <p id="empty-note" class="empty-note" style="display:none;"></p>
+  </main>
+</div>
+
+<script src="assets/logos-common.js"></script>
+<script src="assets/logos-books.js"></script>
+<script>
+(function () {
+  var C = window.LogosCommon;
+  var books = window.LOGOS_BOOKS || [];
+  var currentLang = C.getPreferredLang();
+
+  var TEXT = {
+    en: { subtitle: 'Bible study summaries — choose a book below', empty: 'No books yet.' },
+    zh: { subtitle: '圣经学习摘要 — 请选择一卷书', empty: '暂无书卷。' }
+  };
+
+  function renderHeader() {
+    document.documentElement.lang = currentLang;
+    document.getElementById('page-subtitle').textContent = TEXT[currentLang].subtitle;
+  }
+
+  function renderGrid() {
+    var grid = document.getElementById('book-grid');
+    grid.innerHTML = '';
+    if (books.length === 0) {
+      document.getElementById('empty-note').style.display = 'block';
+      document.getElementById('empty-note').textContent = TEXT[currentLang].empty;
+      return;
+    }
+    books.forEach(function (b) {
+      var li = document.createElement('li');
+      li.className = 'book-card';
+      var name = currentLang === 'zh' ? b.zh : b.en;
+      var alt = currentLang === 'zh' ? b.en : b.zh;
+      li.innerHTML =
+        '<h2>' + name + '<span class="book-alt">' + alt + '</span></h2>' +
+        '<a class="book-open" href="' + b.folder + '/index.html">' +
+          (currentLang === 'zh' ? '打开 →' : 'Open →') +
+        '</a>';
+      grid.appendChild(li);
+    });
+  }
+
+  function renderAll() {
+    C.renderLangSelect(document.getElementById('lang-select'), currentLang, function (lang) {
+      currentLang = lang;
+      renderAll();
+    });
+    renderHeader();
+    renderGrid();
+  }
+
+  renderAll();
+})();
+</script>
+
+</body>
+</html>

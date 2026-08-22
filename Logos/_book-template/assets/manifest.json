@@ -1,0 +1,10 @@
+{
+  "book": {
+    "title": { "en": "{{BOOK_TITLE_EN}}", "zh": "{{BOOK_TITLE_ZH}}" },
+    "subtitle": {
+      "en": "Bible study summaries, most recent first",
+      "zh": "圣经学习摘要，按最近的聚会顺序排列"
+    }
+  },
+  "entries": []
+}
