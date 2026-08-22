@@ -8,19 +8,19 @@
   },
   "entries": [
     {
-      "date": "2026-08-16",
-      "displayDate": { "en": "August 16, 2026", "zh": "2026年8月16日" },
+      "date": "2026-08-22",
+      "displayDate": { "en": "August 22, 2026", "zh": "2026年8月22日" },
       "title": {
-        "en": "Acts 2 — Pentecost and the Birth of the Church",
-        "zh": "使徒行传第2章 — 五旬节与教会的诞生"
+        "en": "Acts 10:39\u201348 \u2014 Peter's Sermon to Cornelius",
+        "zh": "使徒行传 10:39-48 — 彼得向哥尼流的讲道"
       },
       "excerpt": {
-        "en": "The Spirit poured out at Pentecost, Peter's first sermon, and the marks of the early church's shared life.",
-        "zh": "五旬节圣灵浇灌，彼得的第一篇讲道，以及早期教会共同生活的印记。"
+        "en": "The five core elements of Peter's gospel, the Spirit poured out on the Gentiles, and the order of salvation.",
+        "zh": "彼得福音信息的五个核心要素、圣灵浇灌在外邦人身上，以及救恩的顺序。"
       },
       "files": {
-        "en": "2026-08-16/en.html",
-        "zh": "2026-08-16/zh.html"
+        "en": "entries/2026-08-22-en.html",
+        "zh": "entries/2026-08-22-zh.html"
       }
     }
   ]
