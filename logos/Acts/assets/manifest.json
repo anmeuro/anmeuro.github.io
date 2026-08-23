@@ -10,18 +10,163 @@
     {
       "date": "2026-08-22",
       "displayDate": { "en": "August 22, 2026", "zh": "2026年8月22日" },
-      "title": {
-        "en": "Acts 10:39\u201348 \u2014 Peter's Sermon to Cornelius",
-        "zh": "使徒行传 10:39-48 — 彼得向哥尼流的讲道"
-      },
-      "excerpt": {
-        "en": "The five core elements of Peter's gospel, the Spirit poured out on the Gentiles, and the order of salvation.",
-        "zh": "彼得福音信息的五个核心要素、圣灵浇灌在外邦人身上，以及救恩的顺序。"
-      },
-      "files": {
-        "en": "entries/2026-08-22-en.html",
-        "zh": "entries/2026-08-22-zh.html"
-      }
+      "title": { "en": "Acts 10:39\u201348 \u2014 Peter's Sermon to Cornelius", "zh": "使徒行传 10:39-48 — 彼得向哥尼流的讲道" },
+      "excerpt": { "en": "The five core elements of Peter's gospel, the Spirit poured out on the Gentiles, and the order of salvation.", "zh": "彼得福音信息的五个核心要素、圣灵浇灌在外邦人身上，以及救恩的顺序。" },
+      "files": { "en": "entries/2026-08-22-en.html", "zh": "entries/2026-08-22-zh.html" }
+    },
+    {
+      "date": "2026-08-15",
+      "displayDate": { "en": "August 15, 2026", "zh": "2026年8月15日" },
+      "title": { "en": "Acts 10:24-38 \u2014 Peter at Cornelius's House: God Shows No Favoritism", "zh": "使徒行传 10:24-38 — 彼得在哥尼流家：神不偏待人" },
+      "excerpt": { "en": "God's simultaneous preparation of Peter and Cornelius, peace in two dimensions, and who the man in shining clothes was.", "zh": "神同时预备彼得与哥尼流，平安的两个层面，以及那位身穿光明衣服的人是谁。" },
+      "files": { "en": "entries/2026-08-15-en.html", "zh": "entries/2026-08-15-zh.html" }
+    },
+    {
+      "date": "2026-08-08",
+      "displayDate": { "en": "August 8, 2026", "zh": "2026年8月8日" },
+      "title": { "en": "Acts 10:1-23 \u2014 Cornelius and Peter: Two Parallel Transformations", "zh": "使徒行传 10:1-23 — 哥尼流与彼得：两个平行的转变" },
+      "excerpt": { "en": "God's turning point in Acts, opening the gospel to the Gentiles through two men prepared at once.", "zh": "使徒行传的转折点，神藉两个人同时的预备，向外邦人开启福音。" },
+      "files": { "en": "entries/2026-08-08-en.html", "zh": "entries/2026-08-08-zh.html" }
+    },
+    {
+      "date": "2026-08-01",
+      "displayDate": { "en": "August 1, 2026", "zh": "2026年8月1日" },
+      "title": { "en": "Acts 9:20-43 \u2014 Saul's Escape, Aeneas &amp; Dorcas Raised", "zh": "使徒行传 9:20-43 — 扫罗的逃脱、以尼亚与多加复活" },
+      "excerpt": { "en": "Saul's immediate preaching, his humbling escape from Damascus, and two miracles that pointed past themselves.", "zh": "扫罗立即的传道、他在大马士革谦卑的逃脱，以及两个指向神而非自身的神迹。" },
+      "files": { "en": "entries/2026-08-01-en.html", "zh": "entries/2026-08-01-zh.html" }
+    },
+    {
+      "date": "2026-07-25",
+      "displayDate": { "en": "July 25, 2026", "zh": "2026年7月25日" },
+      "title": { "en": "Acts 9:1-19 \u2014 Saul's Conversion &amp; God's Sovereign Grace", "zh": "使徒行传 9:1-19 — 扫罗的归信与神的主权恩典" },
+      "excerpt": { "en": "Grace that comes looking for us, transformation through humility, and an ordinary believer named Ananias.", "zh": "主动寻找我们的恩典、藉谦卑而来的转变，以及一位平凡的信徒亚拿尼亚。" },
+      "files": { "en": "entries/2026-07-25-en.html", "zh": "entries/2026-07-25-zh.html" }
+    },
+    {
+      "date": "2026-07-18",
+      "displayDate": { "en": "July 18, 2026", "zh": "2026年7月18日" },
+      "title": { "en": "Acts 8:30-40 \u2014 Baptism, Prophecy Fulfilled &amp; the Eunuch's Joy", "zh": "使徒行传 8:30-40 — 洗礼、预言的应验与太监的喜乐" },
+      "excerpt": { "en": "What baptism actually means, Isaiah 53 fulfilled, and understanding Jesus' anguish in Gethsemane.", "zh": "洗礼真正的意义、以赛亚书53章的应验，以及理解耶稣在客西马尼园的痛苦。" },
+      "files": { "en": "entries/2026-07-18-en.html", "zh": "entries/2026-07-18-zh.html" }
+    },
+    {
+      "date": "2026-07-11",
+      "displayDate": { "en": "July 11, 2026", "zh": "2026年7月11日" },
+      "title": { "en": "Acts 8:18-35 \u2014 Simon's Error &amp; Philip and the Ethiopian Eunuch", "zh": "使徒行传 8:18-35 — 西门的错误与腓利传福音给埃塞俄比亚太监" },
+      "excerpt": { "en": "Simon's misunderstanding of the Spirit, and a high official who humbly asked for help understanding Scripture.", "zh": "西门对圣灵的误解，以及一位谦卑求助以明白经文的高级官员。" },
+      "files": { "en": "entries/2026-07-11-en.html", "zh": "entries/2026-07-11-zh.html" }
+    },
+    {
+      "date": "2026-07-04",
+      "displayDate": { "en": "July 4, 2026", "zh": "2026年7月4日" },
+      "title": { "en": "Acts 8:1-17 \u2014 Scattered to Samaria: Philip, Simon &amp; the Spirit", "zh": "使徒行传 8:1-17 — 分散到撒玛利亚：腓利、西门与圣灵" },
+      "excerpt": { "en": "Persecution scatters the church into Samaria, and the difference between the Spirit's inward and outward work.", "zh": "逼迫使教会分散到撒玛利亚，以及圣灵内在与外在工作的区别。" },
+      "files": { "en": "entries/2026-07-04-en.html", "zh": "entries/2026-07-04-zh.html" }
+    },
+    {
+      "date": "2026-06-27",
+      "displayDate": { "en": "June 27, 2026", "zh": "2026年6月27日" },
+      "title": { "en": "Acts 7 \u2014 Stephen's Speech &amp; Martyrdom", "zh": "使徒行传第七章 — 司提反的讲道与殉道" },
+      "excerpt": { "en": "Abraham, Joseph, and Moses as proof God is not confined to the temple, and the church's first martyr.", "zh": "亚伯拉罕、约瑟与摩西证明神不受圣殿局限，以及教会第一位殉道者。" },
+      "files": { "en": "entries/2026-06-27-en.html", "zh": "entries/2026-06-27-zh.html" }
+    },
+    {
+      "date": "2026-06-20",
+      "displayDate": { "en": "June 20, 2026", "zh": "2026年6月20日" },
+      "title": { "en": "Acts 5:33-6:15 \u2014 Gamaliel's Counsel, Seven Deacons &amp; Stephen", "zh": "使徒行传 5:33-6:15 — 迦玛列的劝告、七位执事与司提反" },
+      "excerpt": { "en": "A respected teacher's caution, the church's first internal conflict, and Stephen's introduction.", "zh": "一位受尊敬教师的劝告、教会第一次的内部冲突，以及司提反的登场。" },
+      "files": { "en": "entries/2026-06-20-en.html", "zh": "entries/2026-06-20-zh.html" }
+    },
+    {
+      "date": "2026-06-13",
+      "displayDate": { "en": "June 13, 2026", "zh": "2026年6月13日" },
+      "title": { "en": "Acts 5:12-32 \u2014 Signs and Wonders, and Obeying God Rather Than People", "zh": "使徒行传 5:12-32 — 神迹奇事与顺从神而非顺从人" },
+      "excerpt": { "en": "An angel's jailbreak, two kinds of fear, and a modern story of obedience at real cost.", "zh": "天使的越狱、两种惧怕，以及一个真实付代价顺服的现代故事。" },
+      "files": { "en": "entries/2026-06-13-en.html", "zh": "entries/2026-06-13-zh.html" }
+    },
+    {
+      "date": "2026-05-30",
+      "displayDate": { "en": "May 30, 2026", "zh": "2026年5月30日" },
+      "title": { "en": "Acts 4:32-5:11 \u2014 Barnabas's Generosity &amp; Ananias and Sapphira's Deception", "zh": "使徒行传 4:32-5:11 — 巴拿巴的慷慨与亚拿尼亚、撒非喇的欺骗" },
+      "excerpt": { "en": "The real sin wasn't withholding money but lying to the Holy Spirit, and the church's name first appears.", "zh": "真正的罪不是保留钱财，而是向圣灵说谎，\"教会\"一词也首次出现。" },
+      "files": { "en": "entries/2026-05-30-en.html", "zh": "entries/2026-05-30-zh.html" }
+    },
+    {
+      "date": "2026-05-15",
+      "displayDate": { "en": "May 15, 2026", "zh": "2026年5月15日" },
+      "title": { "en": "Acts 4:27-35 \u2014 Shaken by Prayer &amp; a Shared Life", "zh": "使徒行传 4:27-35 — 祷告中的震动与凡物公用的生活" },
+      "excerpt": { "en": "A repeating pattern of persecution and prayer, and why the resurrection stays the center of the gospel.", "zh": "逼迫与祷告反复出现的模式，以及复活为何始终是福音的核心。" },
+      "files": { "en": "entries/2026-05-15-en.html", "zh": "entries/2026-05-15-zh.html" }
+    },
+    {
+      "date": "2026-05-09",
+      "displayDate": { "en": "May 9, 2026", "zh": "2026年5月9日" },
+      "title": { "en": "Acts 4 \u2014 Bold Under Persecution: the Early Church's Prayer", "zh": "使徒行传第四章 — 逼迫中的勇气：早期教会的祷告" },
+      "excerpt": { "en": "Two kinds of sin, and a prayer that asked for boldness rather than for persecution to stop.", "zh": "两种罪的区别，以及一个求胆量而非求逼迫停止的祷告。" },
+      "files": { "en": "entries/2026-05-09-en.html", "zh": "entries/2026-05-09-zh.html" }
+    },
+    {
+      "date": "2026-04-25",
+      "displayDate": { "en": "April 25, 2026", "zh": "2026年4月25日" },
+      "title": { "en": "Acts 4:1-14 \u2014 Before the Sanhedrin: Jesus the Cornerstone", "zh": "使徒行传 4:1-14 — 在公会面前：房角石耶稣" },
+      "excerpt": { "en": "The only cornerstone, the only name, and how persecution actually fuels the church's growth.", "zh": "唯一的房角石、唯一的名，以及逼迫如何反倒推动教会的增长。" },
+      "files": { "en": "entries/2026-04-25-en.html", "zh": "entries/2026-04-25-zh.html" }
+    },
+    {
+      "date": "2026-04-18",
+      "displayDate": { "en": "April 18, 2026", "zh": "2026年4月18日" },
+      "title": { "en": "Acts 3:17-26 \u2014 The Prophesied Messiah &amp; the Call to Repent", "zh": "使徒行传 3:17-26 — 预言中的弥赛亚与悔改的呼召" },
+      "excerpt": { "en": "Love and justice together, real repentance, and Moses and Joseph as types of Christ.", "zh": "爱与公义同行、真正的悔改，以及摩西与约瑟对基督的预表。" },
+      "files": { "en": "entries/2026-04-18-en.html", "zh": "entries/2026-04-18-zh.html" }
+    },
+    {
+      "date": "2026-04-11",
+      "displayDate": { "en": "April 11, 2026", "zh": "2026年4月11日" },
+      "title": { "en": "Acts 3 \u2014 Healing at the Beautiful Gate &amp; Peter's Sermon", "zh": "使徒行传第3章 — 美门口的医治与彼得的讲道" },
+      "excerpt": { "en": "A beggar at a beautiful gate, eye contact before the healing, and what actually changes a heart.", "zh": "美门前的乞丐、医治前的眼神交流，以及真正能改变人心的是什么。" },
+      "files": { "en": "entries/2026-04-11-en.html", "zh": "entries/2026-04-11-zh.html" }
+    },
+    {
+      "date": "2026-04-04",
+      "displayDate": { "en": "April 4, 2026", "zh": "2026年4月4日" },
+      "title": { "en": "Acts 2 \u2014 Peter's Pentecost Sermon &amp; the Early Church's Shared Life", "zh": "使徒行传第二章 — 彼得的五旬节讲道与早期教会的团契生活" },
+      "excerpt": { "en": "Peter's use of the Psalms, Sinai and Pentecost compared, and how the new church actually lived together.", "zh": "彼得对诗篇的引用、西奈山与五旬节的对照，以及新生教会实际的团契生活。" },
+      "files": { "en": "entries/2026-04-04-en.html", "zh": "entries/2026-04-04-zh.html" }
+    },
+    {
+      "date": "2026-03-14",
+      "displayDate": { "en": "March 14, 2026", "zh": "2026年3月14日" },
+      "title": { "en": "Revival Movements in Church History", "zh": "教会历史中的复兴运动" },
+      "excerpt": { "en": "From Azusa Street to underground churches in China, and what unites every true revival.", "zh": "从阿苏萨街到中国的家庭教会，以及一切真实复兴共同的根基。" },
+      "files": { "en": "entries/2026-03-14-en.html", "zh": "entries/2026-03-14-zh.html" }
+    },
+    {
+      "date": "2026-03-07",
+      "displayDate": { "en": "March 7, 2026", "zh": "2026年3月7日" },
+      "title": { "en": "Jewish Festivals, Pentecost &amp; the Gift of Tongues", "zh": "犹太节期、五旬节与方言的恩赐" },
+      "excerpt": { "en": "How the spring feasts foreshadowed Christ, and the real difference between private and public tongues.", "zh": "春季节期如何预表基督，以及私人方言与公共方言真正的区别。" },
+      "files": { "en": "entries/2026-03-07-en.html", "zh": "entries/2026-03-07-zh.html" }
+    },
+    {
+      "date": "2026-02-28",
+      "displayDate": { "en": "February 28, 2026", "zh": "2026年2月28日" },
+      "title": { "en": "Acts 1 \u2014 The Ascension, the Promise of the Spirit &amp; the New Apostle", "zh": "使徒行传第一章 — 升天、圣灵的应许与新使徒" },
+      "excerpt": { "en": "Why the Mount of Olives, how a new apostle was chosen, and God's sovereignty alongside human free will.", "zh": "为何是橄榄山、新使徒如何选立，以及神的主权与人的自由意志。" },
+      "files": { "en": "entries/2026-02-28-en.html", "zh": "entries/2026-02-28-zh.html" }
+    },
+    {
+      "date": "2026-02-14",
+      "displayDate": { "en": "February 14, 2026", "zh": "2026年2月14日" },
+      "title": { "en": "The Kingdom of God, the Ascension &amp; the Return of Christ", "zh": "神的国、升天与基督的再来" },
+      "excerpt": { "en": "Israel's restoration, spiritual and physical, and why God chose ordinary Galileans as his witnesses.", "zh": "以色列复兴的属灵与物质层面，以及神为何拣选平凡的加利利人作见证人。" },
+      "files": { "en": "entries/2026-02-14-en.html", "zh": "entries/2026-02-14-zh.html" }
+    },
+    {
+      "date": "2026-02-07",
+      "displayDate": { "en": "February 7, 2026", "zh": "2026年2月7日" },
+      "title": { "en": "Introduction to Acts \u2014 Structure, Authorship &amp; the Kingdom of God", "zh": "使徒行传导论 — 结构、作者与神的国" },
+      "excerpt": { "en": "Why Luke wrote two volumes, the shape of Acts, and what it means to live as Kingdom citizens now.", "zh": "路加为何写下上下两卷书、使徒行传的结构，以及现在就作神国子民的意义。" },
+      "files": { "en": "entries/2026-02-07-en.html", "zh": "entries/2026-02-07-zh.html" }
     }
   ]
 }
