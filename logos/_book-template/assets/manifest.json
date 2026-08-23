@@ -1,9 +1,10 @@
 {
   "book": {
-    "title": { "en": "{{BOOK_TITLE_EN}}", "zh": "{{BOOK_TITLE_ZH}}" },
+    "title": { "en": "{{BOOK_TITLE_EN}}", "zh": "{{BOOK_TITLE_ZH}}", "ko": "{{BOOK_TITLE_KO}}" },
     "subtitle": {
       "en": "Bible study summaries, most recent first",
-      "zh": "圣经学习摘要，按最近的聚会顺序排列"
+      "zh": "圣经学习摘要，按最近的聚会顺序排列",
+      "ko": "성경공부 요약, 최신순으로 정렬"
     }
   },
   "entries": []

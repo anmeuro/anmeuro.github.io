@@ -1,10 +1,10 @@
 // Shared language helpers for the Logos section.
-// Only English and Chinese are supported here (unlike the 4-language
-// newsletters section). Preference is remembered via localStorage,
-// separate from the newsletters section's own key.
+// English, Chinese, and Korean are supported here. Preference is
+// remembered via localStorage, separate from the newsletters section's
+// own key.
 window.LogosCommon = (function () {
-  var LANG_ORDER = ['en', 'zh'];
-  var LANG_LABEL = { en: 'English', zh: '中文' };
+  var LANG_ORDER = ['en', 'zh', 'ko'];
+  var LANG_LABEL = { en: 'English', zh: '中文', ko: '한국어' };
   var STORAGE_KEY = 'logos-preferred-lang';
 
   function getPreferredLang() {
@@ -18,7 +18,8 @@ window.LogosCommon = (function () {
       if (stored && LANG_ORDER.indexOf(stored) !== -1) return stored;
     } catch (e) {}
     var nav = (navigator.language || 'en').slice(0, 2);
-    return nav === 'zh' ? 'zh' : 'en';
+    if (LANG_ORDER.indexOf(nav) !== -1) return nav;
+    return 'en';
   }
 
   function setPreferredLang(lang) {

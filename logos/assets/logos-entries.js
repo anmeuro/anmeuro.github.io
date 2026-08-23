@@ -39,8 +39,8 @@
 
       if (entries.length === 0) {
         statusEl.style.display = 'block';
-        statusEl.textContent = currentLang === 'zh'
-          ? '暂无摘要。' : 'No summaries yet.';
+        var emptyMsg = { en: 'No summaries yet.', zh: '暂无摘要。', ko: '아직 등록된 요약이 없습니다.' };
+        statusEl.textContent = emptyMsg[currentLang] || emptyMsg.en;
         return;
       }
       statusEl.style.display = 'none';
