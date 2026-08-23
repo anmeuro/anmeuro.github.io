@@ -12,6 +12,11 @@
 <div class="wrap">
   <header class="site-header">
     <p class="crumb"><a href="../index.html">← Home</a></p>
+
+    <nav class="site-nav" aria-label="Site sections">
+      <a href="https://github.com/anmeuro/study-group/discussions" class="site-nav-link" id="nav-discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
+    </nav>
+
     <h1 class="site-title" id="page-title">Logos</h1>
     <p class="site-subtitle" id="page-subtitle">Bible study summaries — choose a book below</p>
 
@@ -35,14 +40,15 @@
   var currentLang = C.getPreferredLang();
 
   var TEXT = {
-    en: { subtitle: 'Bible study summaries — choose a book below', empty: 'No books yet.', open: 'Open →' },
-    zh: { subtitle: '圣经学习摘要 — 请选择一卷书', empty: '暂无书卷。', open: '打开 →' },
-    ko: { subtitle: '성경공부 요약 — 아래에서 책을 선택하세요', empty: '아직 등록된 책이 없습니다.', open: '열기 →' }
+    en: { subtitle: 'Bible study summaries — choose a book below', empty: 'No books yet.', open: 'Open →', discussions: 'Discussions' },
+    zh: { subtitle: '圣经学习摘要 — 请选择一卷书', empty: '暂无书卷。', open: '打开 →', discussions: '讨论区' },
+    ko: { subtitle: '성경공부 요약 — 아래에서 책을 선택하세요', empty: '아직 등록된 책이 없습니다.', open: '열기 →', discussions: '토론방' }
   };
 
   function renderHeader() {
     document.documentElement.lang = currentLang;
     document.getElementById('page-subtitle').textContent = TEXT[currentLang].subtitle;
+    document.getElementById('nav-discussions').textContent = TEXT[currentLang].discussions;
   }
 
   function renderGrid() {
