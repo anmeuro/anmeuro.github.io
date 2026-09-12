@@ -13,6 +13,29 @@
     },
     "entries": [
         {
+            "date": "2026-09-12",
+            "displayDate": {
+                "en": "September 12, 2026",
+                "zh": "2026年9月12日",
+                "ko": "2026년 9월 12일"
+            },
+            "title": {
+                "en": "Acts 12:1–19 — Herod's Persecution, Peter's Rescue, and the Nature of Prayer",
+                "zh": "使徒行传 12:1-19 — 希律的逼迫、彼得的搭救与祷告的真义",
+                "ko": "사도행전 12:1-19 — 헤롯의 박해, 베드로의 구출, 그리고 기도의 본질"
+            },
+            "excerpt": {
+                "en": "Herod kills James and imprisons Peter, an angel rescues Peter, and the group wrestles with why prayer for both men had such different outcomes.",
+                "zh": "希律杀害雅各并囚禁彼得，天使搭救了彼得，小组探讨为何两人的祷告却带来截然不同的结局。",
+                "ko": "헤롯이 야고보를 죽이고 베드로를 가두며, 천사가 베드로를 구출하고, 모임은 두 사람을 위한 기도가 왜 그리 다른 결과를 냈는지를 다루었다."
+            },
+            "files": {
+                "en": "entries/2026-09-12-en.html",
+                "zh": "entries/2026-09-12-zh.html",
+                "ko": "entries/2026-09-12-ko.html"
+            }
+        },
+        {
             "date": "2026-08-29",
             "displayDate": {
                 "en": "August 29, 2026",
