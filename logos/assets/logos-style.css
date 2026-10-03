@@ -77,6 +77,36 @@ a { color: inherit; }
   }
 }
 
+/* ---------- Book cover thumbnail (book index page, e.g. Acts) ----------
+   Optional, driven by manifest.json's book.cover. Hidden on narrow
+   screens and when a book has no cover set (renderer leaves it empty).
+   Mirrors .header-qr's position/size since both sit in the same header
+   top-right corner, but kept as separate classes since the two features
+   are unrelated (QR code vs. a companion-PDF cover thumbnail). */
+.book-cover-link {
+  display: none;
+}
+@media (min-width: 768px) {
+  .book-cover-link {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 130px;
+  }
+}
+.book-cover-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1.5px solid var(--hairline);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.book-cover-link:hover .book-cover-img {
+  border-color: var(--accent);
+}
+
 /* ---------- Site nav ---------- */
 .site-nav {
   margin: 0 0 16px;

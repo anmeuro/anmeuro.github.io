@@ -9,6 +9,15 @@
       "en": "Bible study summaries, most recent first",
       "zh": "圣经学习摘要，按最近的聚会顺序排列",
       "ko": "성경공부 요약, 최신순으로 정렬"
+    },
+    "cover": {
+      "image": "assets/heavenly-man-cover.jpg",
+      "href": "assets/heavenly-man-chinese.pdf",
+      "alt": {
+        "en": "The Heavenly Man — read the full book (PDF)",
+        "zh": "《天上人》——阅读全书（PDF）",
+        "ko": "《천상인》 — 전체 책 읽기 (PDF)"
+      }
     }
   },
   "entries": [

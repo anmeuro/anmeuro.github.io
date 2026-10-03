@@ -21,6 +21,7 @@
     var langSelectEl = document.getElementById('lang-select');
     var titleEl = document.getElementById('book-title');
     var subtitleEl = document.getElementById('book-subtitle');
+    var coverEl = document.getElementById('book-cover');
     var statusEl = document.getElementById('status');
     var listEl = document.getElementById('entry-list');
 
@@ -29,6 +30,38 @@
       subtitleEl.textContent = C.pick(data.book.subtitle, currentLang);
       document.title = C.pick(data.book.title, currentLang);
       document.documentElement.lang = currentLang;
+      renderCover();
+    }
+
+    // Optional. If data.book.cover is present, shows a cover-art thumbnail
+    // in the header that links out to a companion file (e.g. a full PDF).
+    // Books without a "cover" field in manifest.json simply show nothing.
+    // Expected shape:
+    //   "cover": {
+    //     "image": "assets/some-cover.jpg",
+    //     "href": "assets/some-file.pdf",
+    //     "alt": { "en": "...", "zh": "...", "ko": "..." }
+    //   }
+    function renderCover() {
+      if (!coverEl) return;
+      var cover = data.book.cover;
+      if (!cover || !cover.image || !cover.href) {
+        coverEl.innerHTML = '';
+        return;
+      }
+      var altText = C.pick(cover.alt, currentLang);
+      var a = document.createElement('a');
+      a.className = 'book-cover-link';
+      a.href = cover.href;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      var img = document.createElement('img');
+      img.className = 'book-cover-img';
+      img.src = cover.image;
+      img.alt = altText || '';
+      a.appendChild(img);
+      coverEl.innerHTML = '';
+      coverEl.appendChild(a);
     }
 
     function renderList() {
