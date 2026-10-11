@@ -22,6 +22,29 @@
   },
   "entries": [
     {
+      "date": "2026-10-10",
+      "displayDate": {
+        "en": "October 10, 2026",
+        "zh": "2026年10月10日",
+        "ko": "2026년 10월 10일"
+      },
+      "title": {
+        "en": "Acts 13:1–12 — The Spirit Sends Barnabas and Saul; Reflections on Fasting",
+        "zh": "使徒行传 13:1-12 — 圣灵差派巴拿巴和扫罗；谈禁食",
+        "ko": "사도행전 13:1-12 — 성령이 바나바와 사울을 보내시다; 금식에 대하여"
+      },
+      "excerpt": {
+        "en": "Five diverse leaders in Antioch, the Spirit's initiative in sending Barnabas and Saul to Cyprus, Bar-Jesus and Sergius Paulus, and a discussion of Christian fasting. Includes a map.",
+        "zh": "安提阿的五位多元领袖、圣灵主动差派巴拿巴和扫罗前往塞浦路斯、巴耶稣与士求·保罗，以及对基督徒禁食的讨论。附地图。",
+        "ko": "안디옥의 다섯 지도자, 바나바와 사울을 구브로로 보내시는 성령의 주도권, 바예수와 서기오 바울, 그리고 기독교 금식에 대한 토론. 지도 포함."
+      },
+      "files": {
+        "en": "entries/2026-10-10-en.html",
+        "zh": "entries/2026-10-10-zh.html",
+        "ko": "entries/2026-10-10-ko.html"
+      }
+    },
+    {
       "date": "2026-10-03",
       "displayDate": {
         "en": "October 3, 2026",
