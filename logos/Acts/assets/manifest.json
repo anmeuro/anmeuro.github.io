@@ -22,6 +22,29 @@
   },
   "entries": [
     {
+      "date": "2026-10-24",
+      "displayDate": {
+        "en": "October 24, 2026",
+        "zh": "2026年10月24日",
+        "ko": "2026년 10월 24일"
+      },
+      "title": {
+        "en": "Acts 13:13–52 — Paul's Sermon in Pisidian Antioch: Resurrection, Forgiveness, and Justification",
+        "zh": "使徒行传 13:13-52 — 保罗在彼西底的安提阿讲道：复活、赦罪与称义",
+        "ko": "사도행전 13:13-52 — 비시디아 안디옥에서의 바울의 설교: 부활, 죄 사함, 그리고 칭의"
+      },
+      "excerpt": {
+        "en": "Paul presents the gospel as the fulfillment of Israel's story, the resurrection as its core, forgiveness and justification by faith alone, and the group clarifies resurrection vs. resuscitation.",
+        "zh": "保罗把福音呈现为以色列历史的应验，复活是其核心，唯独因信得赦罪与称义；小组也厘清了复活与复苏的区别。",
+        "ko": "바울은 복음을 이스라엘 역사의 성취로, 부활을 그 핵심으로, 오직 믿음으로 말미암는 죄 사함과 칭의를 전하며, 모임은 부활과 소생의 차이를 짚어 본다."
+      },
+      "files": {
+        "en": "entries/2026-10-24-en.html",
+        "zh": "entries/2026-10-24-zh.html",
+        "ko": "entries/2026-10-24-ko.html"
+      }
+    },
+    {
       "date": "2026-10-10",
       "displayDate": {
         "en": "October 10, 2026",
