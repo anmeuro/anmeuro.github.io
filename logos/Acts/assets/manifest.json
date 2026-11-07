@@ -22,6 +22,29 @@
   },
   "entries": [
     {
+      "date": "2026-11-07",
+      "displayDate": {
+        "en": "November 7, 2026",
+        "zh": "2026年11月7日",
+        "ko": "2026년 11월 7일"
+      },
+      "title": {
+        "en": "Acts 14:1–20 — Iconium, Lystra, and Derbe: Miracles, Idolatry, and Paul Stoned",
+        "zh": "使徒行传 14:1-20 — 以哥念、路司得与特庇：神迹、偶像与保罗被石头打",
+        "ko": "사도행전 14:1-20 — 이고니온, 루스드라, 더베: 기적, 우상, 그리고 돌에 맞은 바울"
+      },
+      "excerpt": {
+        "en": "A repeating pattern of belief and opposition, miracles that confirm the message rather than the messenger, idolatry, contextualizing the gospel, and Paul stoned at Lystra. Includes a map and illustrations.",
+        "zh": "相信与反对反复出现的模式、印证信息而非传信人的神迹、偶像崇拜、福音的处境化，以及保罗在路司得被石头打。附地图与插图。",
+        "ko": "믿음과 반대가 반복되는 패턴, 전하는 사람이 아니라 메시지를 확증하는 기적, 우상숭배, 복음의 상황화, 그리고 루스드라에서 돌에 맞은 바울. 지도와 삽화 포함."
+      },
+      "files": {
+        "en": "entries/2026-11-07-en.html",
+        "zh": "entries/2026-11-07-zh.html",
+        "ko": "entries/2026-11-07-ko.html"
+      }
+    },
+    {
       "date": "2026-10-24",
       "displayDate": {
         "en": "October 24, 2026",
