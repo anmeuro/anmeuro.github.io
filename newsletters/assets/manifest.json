@@ -46,24 +46,29 @@
   "entries": [
     {
       "date": "2026-11-11",
-      "displayDate": { "en": "November 11, 2026", "ko": "2026\ub144 11\uc6d4 11\uc77c", "zh": "2026\u5e7411\u670811\u65e5", "de": "11. November 2026" },
+      "displayDate": {
+            "en": "November 11, 2026",
+            "ko": "2026\ub144 11\uc6d4 11\uc77c",
+            "zh": "2026\u5e7411\u670811\u65e5",
+            "de": "11. November 2026"
+      },
       "title": {
-        "en": "Long-Delayed Update",
-        "ko": "\uc624\ub798 \ubbf8\ub904\uc628 \uc18c\uc2dd",
-        "zh": "\u8fdf\u6765\u5df2\u4e45\u7684\u8fd1\u51b5",
-        "de": "L\u00e4ngst \u00fcberf\u00e4lliges Update"
+            "en": "Long-Delayed Update",
+            "ko": "\uc624\ub798 \ubbf8\ub904\uc628 \uc18c\uc2dd\ub4e4",
+            "zh": "\u8fdf\u6765\u5df2\u4e45\u7684\u8fd1\u51b5",
+            "de": "L\u00e4ngst \u00fcberf\u00e4lliges Update"
       },
       "excerpt": {
-        "en": "Ordained October 18 after a deer-strike en route to the Shepherd\u2019s Conference, 21 regular attendees, and a campus ministry marked by both a student\u2019s loss of faith and a student\u2019s desire for baptism.",
-        "ko": "\uc0ac\uc2b4\uacfc \ucda9\ub3cc\ud55c \ud6c4 10\uc6d4 18\uc77c\uc5d0 \uc548\uc218\ub97c \ubc1b\uc558\uace0, \uc8fc\uc77c\ub9c8\ub2e4 21\uba85\uc774 \ubaa8\uc774\uba70, \ud55c \ud559\uc0dd\uc758 \uc2e0\uc559 \uc774\ud0c8\uacfc \ub610 \ub2e4\ub978 \ud559\uc0dd\uc758 \uc138\ub840 \uc18c\ub9dd\uc774 \uacf5\uc874\ud55c \ud559\uae30\uc600\uc2b5\ub2c8\ub2e4.",
-        "zh": "\u56e0\u9035\u8f66\u4e8b\u6545\u63a8\u8fdf\u4e86\u8291\u7267\u4f1a\u8bae\u884c\u7a0b\uff0c\u537410\u670818\u65e5\u4ecd\u5982\u671f\u53d7\u4efb\u6309\u7acb\uff0c\u6bcf\u5468\u572621\u4f4d\u56fa\u5b9a\u51fa\u5e2d\u8005\uff0c\u6821\u56ed\u4e8b\u5de5\u4e2d\u65e2\u6709\u5b66\u751f\u79bb\u5f03\u4fe1\u4ef0\u7684\u75db\uff0c\u4e5f\u6709\u5b66\u751f\u6e34\u671b\u53d7\u6d17\u7684\u559c\u3002",
-        "de": "Trotz eines Wildunfalls auf dem Weg zur Shepherd\u2019s Conference am 18. Oktober ordiniert, 21 regelm\u00e4\u00dfige Besucher und eine Campusarbeit zwischen dem Glaubensabfall eines Studenten und dem Taufwunsch eines anderen."
+            "en": "Ordained October 18 after a deer-strike en route to the Shepherd\u2019s Conference, 21 regular attendees, and a campus ministry marked by both a student\u2019s loss of faith and a student\u2019s desire for baptism.",
+            "ko": "\uc0ac\uc2b4\uacfc \ucda9\ub3cc\ud55c \ud6c4 10\uc6d4 18\uc77c\uc5d0 \uc548\uc218\ub97c \ubc1b\uc558\uace0, \uc8fc\uc77c\ub9c8\ub2e4 21\uba85\uc774 \ubaa8\uc774\uba70, \ud55c \ud559\uc0dd\uc758 \uc2e0\uc559 \uc774\ud0c8\uacfc \ub610 \ub2e4\ub978 \ud559\uc0dd\uc758 \uc138\ub840 \uc18c\ub9dd\uc774 \uacf5\uc874\ud55c \ud559\uae30\uc600\uc2b5\ub2c8\ub2e4.",
+            "zh": "\u56e0\u9e7f\u8f66\u4e8b\u6545\u63a8\u8fdf\u4e86\u7267\u8005\u4f1a\u8bae\u884c\u7a0b\uff0c10\u670818\u65e5\u4ecd\u5982\u671f\u53d7\u4efb\u6309\u7acb\uff0c\u6bcf\u5468\u7ea621\u4f4d\u56fa\u5b9a\u51fa\u5e2d\u8005\uff0c\u6821\u56ed\u4e8b\u5de5\u4e2d\u65e2\u6709\u5b66\u751f\u79bb\u5f03\u4fe1\u4ef0\u7684\u75db\uff0c\u4e5f\u6709\u5b66\u751f\u6e34\u671b\u53d7\u6d17\u7684\u559c\u3002",
+            "de": "Trotz eines Wildunfalls auf dem Weg zur Shepherd\u2019s Conference am 18. Oktober ordiniert, 21 regelm\u00e4\u00dfige Besucher und eine Campusarbeit zwischen dem Glaubensabfall eines Studenten und dem Taufwunsch eines anderen."
       },
       "files": {
-        "en": "2026-11-11/en.html",
-        "ko": "2026-11-11/ko.html",
-        "zh": "2026-11-11/zh.html",
-        "de": "2026-11-11/de.html"
+            "en": "2026-11-11/en.html",
+            "ko": "2026-11-11/ko.html",
+            "zh": "2026-11-11/zh.html",
+            "de": "2026-11-11/de.html"
       }
     },
     {
