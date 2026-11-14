@@ -22,6 +22,29 @@
   },
   "entries": [
     {
+      "date": "2026-11-14",
+      "displayDate": {
+        "en": "November 14, 2026",
+        "zh": "2026年11月14日",
+        "ko": "2026년 11월 14일"
+      },
+      "title": {
+        "en": "Acts 14:21–15:12 — Return to Antioch and the Jerusalem Council Dispute: Salvation by Grace Alone",
+        "zh": "使徒行传 14:21-15:12 — 返回安提阿与耶路撒冷会议之争：惟靠恩典得救",
+        "ko": "사도행전 14:21-15:12 — 안디옥으로의 귀환과 예루살렘 회의 논쟁: 오직 은혜로 받는 구원"
+      },
+      "excerpt": {
+        "en": "Paul and Barnabas close the first journey by strengthening churches and appointing elders, then confront the demand that Gentiles be circumcised: salvation is by grace through faith alone.",
+        "zh": "保罗和巴拿巴以坚固教会、设立长老结束第一次旅程，随后面对外邦人必须受割礼的要求：救恩惟独本乎恩、藉着信。",
+        "ko": "바울과 바나바는 교회를 굳건히 하고 장로를 세우며 첫 여행을 마무리한 뒤, 이방인도 할례를 받아야 한다는 요구에 맞선다: 구원은 오직 믿음으로 말미암는 은혜다."
+      },
+      "files": {
+        "en": "entries/2026-11-14-en.html",
+        "zh": "entries/2026-11-14-zh.html",
+        "ko": "entries/2026-11-14-ko.html"
+      }
+    },
+    {
       "date": "2026-11-07",
       "displayDate": {
         "en": "November 7, 2026",
