@@ -22,6 +22,29 @@
   },
   "entries": [
     {
+      "date": "2026-11-21",
+      "displayDate": {
+        "en": "November 21, 2026",
+        "zh": "2026年11月21日",
+        "ko": "2026년 11월 21일"
+      },
+      "title": {
+        "en": "Acts 15:13–44 — The Jerusalem Council's Decision and the Parting of Paul and Barnabas",
+        "zh": "使徒行传 15:13-44 — 耶路撒冷会议的决议与保罗、巴拿巴的分道扬镳",
+        "ko": "사도행전 15:13-44 — 예루살렘 회의의 결정과 바울·바나바의 갈라섬"
+      },
+      "excerpt": {
+        "en": "The council affirms salvation by grace through faith for Jews and Gentiles alike and gives four practical guidelines; Paul and Barnabas then part ways over John Mark. Includes slides.",
+        "zh": "会议确认犹太人与外邦人同样本乎恩、藉着信得救，并提出四项实践指引；随后保罗和巴拿巴因马可而分道扬镳。附幻灯片。",
+        "ko": "회의는 유대인과 이방인 모두 은혜로 믿음을 통해 구원받음을 확인하고 네 가지 실천 지침을 제시하며, 이어 바울과 바나바는 요한 마가 문제로 갈라선다. 슬라이드 포함."
+      },
+      "files": {
+        "en": "entries/2026-11-21-en.html",
+        "zh": "entries/2026-11-21-zh.html",
+        "ko": "entries/2026-11-21-ko.html"
+      }
+    },
+    {
       "date": "2026-11-14",
       "displayDate": {
         "en": "November 14, 2026",
